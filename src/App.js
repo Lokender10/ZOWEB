@@ -50,12 +50,12 @@ function App() {
       <Appdown/>
       <Faq />
       <Footer />
-
+{/* 
       <Routes>
          <Route  path="/Home" element={<About/>}/> 
        
          
-        </Routes>
+        </Routes> */}
 
     </>
   );
