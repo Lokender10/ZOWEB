@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import "./Header.css";
 import Button from "../UI/Button/Button";
 import "../UI/Button/Button.css";
-import phoneHeader from "../../assets/phone-header-bg.png";
+import about from "../../assets/about.png";
+import head from "../../assets/headimg.png";
+import head1 from "../../assets/headimg1.png";
 import { BsMouse } from "react-icons/bs";
 
 import AOS from "aos";
@@ -16,32 +18,32 @@ const Header = () => {
   }, []);
   return (
     <section id="header">
-      <div className="container header">
+      <div className="header">
         <div className="header-left" data-aos="fade-right">
           <h1>
-            <span>The world's leading</span>
-            <span>cross-platform secure</span>
+            <span>Open Happiness With Zobox Accessories</span>
+            <span>Be a part of rapidly growing successful business Our Presence</span>
             <span>messaging system</span>
           </h1>
           <p className="u-text-small">
-            SocialX is a Lorem ipsum dolor sit amet, consectetur adipisicing
+            Zobox is a Lorem ipsum dolor sit amet, consectetur adipisicing
             elit. Obcaecati ea aliquam sit nemo nisi! Nesciunt quis illum id qui
             et!
           </p>
           <div className="header-cta">
-            <Button text={"Get Started"} btnClass={"btn-dark"} href={"#"} />
+            <Button className="btn1" text={"Get Started"} btnClass={"btn-dark"} href={"#"} />
             <Button text={"How It Works"} btnClass={"btn-light"} href={"#"} />
           </div>
         </div>
         <div className="header-right" data-aos="fade-left">
-          <img src={phoneHeader} alt="phone" />
+          <img src={head} alt="phone" />
         </div>
       </div>
-      <div className="floating-icon">
+      {/* <div className="floating-icon">
         <a href="#features">
           <BsMouse color="#fff" size={25} className="mouse" />
         </a>
-      </div>
+      </div> */}
     </section>
   );
 };

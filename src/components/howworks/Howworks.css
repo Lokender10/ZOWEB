@@ -1,0 +1,47 @@
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+
+.howworks{
+  margin: 0 7%;
+}
+.title h2 {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--dark-text);
+  margin: 1.5rem 0;
+}
+
+.title p {
+  width: 50%;
+  min-width: 40rem;
+  margin: 0 auto;
+  color: var(--dark-text);
+}
+
+.howworks-content {
+  display: flex;
+  justify-content: center;
+  /* padding: 3rem 0; */
+}
+
+.howworks-left {
+  flex: 1;
+  text-align: center;
+}
+.howworks-left img {
+  width: 80%;
+}
+.howworks-right {
+  flex: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .howworks-content {
+    flex-direction: column;
+  }
+}

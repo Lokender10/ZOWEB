@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import logo from "../../assets/logo.png";
+import zobox from "../../assets/zobox.png";
 import {
   FaMapMarkerAlt,
   FaPhoneAlt,
@@ -37,7 +37,7 @@ const Footer = () => {
           <h4>Contact Us</h4>
           <div className="footer-contact u-text-small">
             <p>
-              <FaMapMarkerAlt /> &nbsp; Address: United States.
+              <FaMapMarkerAlt /> &nbsp; Address: New Delhi Karol Bagh.
             </p>
             <p>
               <FaPhoneAlt /> &nbsp; Phone: +1230 123 1231.
@@ -46,7 +46,7 @@ const Footer = () => {
               <FaFax /> &nbsp; Fax: +12342762178
             </p>
             <p>
-              <FaEnvelope /> &nbsp; Email: info@socialx.com
+              <FaEnvelope /> &nbsp; Email: zobox.in.com
             </p>
             <p>
               <FaGlobe /> &nbsp; Website: www.socialx.com
@@ -54,8 +54,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-box">
-          <img src={logo} alt="logo" />
-          <p className="u-text-small">&copy; Copyright 2021. SocialX.com</p>
+          <img src={zobox} alt="logo" height={120} />
+          <p className="u-text-small">&copy; Copyright 2021. Zobox.in</p>
         </div>
       </div>
     </section>

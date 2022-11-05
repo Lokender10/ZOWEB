@@ -1,20 +1,18 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 8rem;
-}
+  position: fixed !important;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #2a3380;
 
+}
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.logo-text {
-  font-size: 40px;
-  font-weight: 300;
-  color: white;
 }
 
 .logo-text span {
@@ -30,6 +28,7 @@
 .nav-links li {
   margin-left: 10px;
   list-style: none;
+  align-items: center;
 }
 
 .nav-links a {
@@ -37,12 +36,13 @@
   font-weight: 300;
   color: #fff;
   text-decoration: none;
-  margin-right: 1rem;
+  margin-right: 2rem;
   transition: all 0.3s;
 }
 .nav-links a:hover,
 #nav-links-mobile a:hover {
-  color: orangered;
+  color: #0a1930;
+  background-color: #fff;
 }
 
 /* a.btn {

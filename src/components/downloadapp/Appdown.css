@@ -1,0 +1,22 @@
+#down_app h1{
+    font-size: 70px;
+    font-weight: 700;
+    color: #18425A;
+}
+
+
+#down_app .content p {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: rgb(132, 130, 130);
+}
+p {
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+
+}
+#down_icon a img {
+    width: 30%;
+}

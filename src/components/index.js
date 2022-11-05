@@ -1,3 +1,5 @@
+import { AddAlarmSharp } from "@material-ui/icons";
+
 export { default as Navbar } from "./navbar/Navbar";
 export { default as Header } from "./header/Header";
 export { default as Features } from "./features/Features";
@@ -5,3 +7,17 @@ export { default as Download } from "./download/Download";
 export { default as Subscribe } from "./subscribe/Subscribe";
 export { default as Faq } from "./faq/Faq";
 export { default as Footer } from "./footer/Footer";
+export { default as Howworks } from "./howworks/Howworks";
+export { default as Carousel } from "./carousel/Carousel";
+export { default as PartCarousel } from "../components/partcarousel/PartCarousel";
+export { default as PartnerForm } from "./PartnerForm/PartnerForm";
+export { default as Counter } from "../components/counter/Counter";
+export { default as Testimonial } from "../components/testimonials/Testimonial";
+export { default as Resellcarousel } from "./Resellcarousel/Resellcarousel" ;
+export { default as Appdown } from "./downloadapp/Appdown" ;
+export {default as News} from "./news/News";
+
+
+
+
+

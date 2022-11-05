@@ -15,7 +15,7 @@ const Download = () => {
   return (
     <section id="download">
       <div className="container download" data-aos="fade-up">
-        <h2>SocialX messenger download</h2>
+        <h2>Zobiz download</h2>
         <p className="u-text-small">
           Our apps are available for download on all stores.
         </p>
@@ -27,9 +27,9 @@ const Download = () => {
             <div className="download-icon">
               <GrAndroid /> <p>Android</p>
             </div>
-            <div className="download-icon">
+            {/* <div className="download-icon">
               <FaWindows /> <p>Windows</p>
-            </div>
+            </div> */}
           </div>
         </IconContext.Provider>
       </div>

@@ -4,6 +4,9 @@ import { RiCloseLine } from "react-icons/ri";
 import { SiAnaconda } from "react-icons/si";
 import Button from "../UI/Button/Button";
 import "../UI/Button/Button.css";
+import zobox from "../../assets/zobox.png";
+import Feature from "../features/Features"
+import { BrowserRouter ,Link ,  Route, Routes} from "react-router-dom";
 
 import "./Navbar.css";
 
@@ -14,29 +17,37 @@ const Navbar = () => {
     setShowMenu(!showMenu);
   };
   return (
-    <nav className="navbar container">
+    <nav className="navbar ">
+    
       <div className="logo">
-        <SiAnaconda color="#fff" size={33} />
-        <p className="logo-text">
-          Social<span>X</span>
-        </p>
+      <img src={zobox} height="70x"/>
+        <div className="logo-text">
+         
+        </div>
       </div>
       <menu>
         <ul
           className="nav-links"
           id={showMenu ? "nav-links-mobile" : "nav-links-mobile-hide"}
         >
+
+<BrowserRouter>
           <li>
-            <a href="#">Home</a>
+          <Link class="nav-link" to="/feature">
+            Abouts
+            </Link>
           </li>
           <li>
-            <a href="#features">Features</a>
+            <a href="#">Partners</a>
+          </li>
+          <li>
+            <a href="#features">Blog</a>
           </li>
           <li>
             <a href="#download">Download</a>
           </li>
           <li>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#subscribe">Partners</a>
           </li>
 
           {/* <li>
@@ -45,8 +56,14 @@ const Navbar = () => {
             </a>
           </li> */}
           <li className="nav-btn">
-            <Button text={"Learn More"} btnClass={"btn-dark"} href={"#faq"} />
+            <Button text={"Shop Now"} btnClass={"btn-dark"} href={"#faq"} />
           </li>
+
+              <Routes>
+                        <Route path="/feature" component={Feature}/>
+                      
+              </Routes>
+  </BrowserRouter>
         </ul>
       </menu>
       <div className="menu-icons" onClick={toggleMenu}>

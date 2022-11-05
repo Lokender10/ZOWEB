@@ -1,5 +1,5 @@
 section#footer {
-  background: var(--dark-blue);
+  background: linear-gradient(to top, #780206, #061161);
   color: #fff;
 }
 
@@ -24,7 +24,7 @@ section#footer {
 }
 
 .footer-box .footer-links a {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 .footer-links {
@@ -32,8 +32,18 @@ section#footer {
   flex-direction: column;
 }
 
+.footer-links a{
+  text-decoration: none;
+  color: #fff;
+  align-items: center;
+  margin-bottom: 5px;
+
+}
+
 .footer-contact p {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
+  font-size: 1.6rem;
+
 }
