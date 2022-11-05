@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/ZOWEB/static/css/main.d556a552.chunk.css",
+    "main.js": "/ZOWEB/static/js/main.018bff7b.chunk.js",
+    "main.js.map": "/ZOWEB/static/js/main.018bff7b.chunk.js.map",
+    "runtime-main.js": "/ZOWEB/static/js/runtime-main.ed0b70ce.js",
+    "runtime-main.js.map": "/ZOWEB/static/js/runtime-main.ed0b70ce.js.map",
+    "static/css/2.0cfd61ed.chunk.css": "/ZOWEB/static/css/2.0cfd61ed.chunk.css",
+    "static/js/2.11a9e7a8.chunk.js": "/ZOWEB/static/js/2.11a9e7a8.chunk.js",
+    "static/js/2.11a9e7a8.chunk.js.map": "/ZOWEB/static/js/2.11a9e7a8.chunk.js.map",
+    "index.html": "/ZOWEB/index.html",
+    "static/css/2.0cfd61ed.chunk.css.map": "/ZOWEB/static/css/2.0cfd61ed.chunk.css.map",
+    "static/css/main.d556a552.chunk.css.map": "/ZOWEB/static/css/main.d556a552.chunk.css.map",
+    "static/js/2.11a9e7a8.chunk.js.LICENSE.txt": "/ZOWEB/static/js/2.11a9e7a8.chunk.js.LICENSE.txt",
+    "static/media/about.12831125.png": "/ZOWEB/static/media/about.12831125.png",
+    "static/media/apple.2a8f2a38.png": "/ZOWEB/static/media/apple.2a8f2a38.png",
+    "static/media/banner4.dffed536.jpg": "/ZOWEB/static/media/banner4.dffed536.jpg",
+    "static/media/daimg.b45c365b.png": "/ZOWEB/static/media/daimg.b45c365b.png",
+    "static/media/download_app.9f206a89.png": "/ZOWEB/static/media/download_app.9f206a89.png",
+    "static/media/headimg.5beefe8d.jpeg": "/ZOWEB/static/media/headimg.5beefe8d.jpeg",
+    "static/media/headimg.686fe7e4.png": "/ZOWEB/static/media/headimg.686fe7e4.png",
+    "static/media/headimg1.92bf1d4f.png": "/ZOWEB/static/media/headimg1.92bf1d4f.png",
+    "static/media/pngwing.com.88c0cf67.png": "/ZOWEB/static/media/pngwing.com.88c0cf67.png",
+    "static/media/slick-theme.css": "/ZOWEB/static/media/slick.c94f7671.ttf",
+    "static/media/slider0.b5bd0330.png": "/ZOWEB/static/media/slider0.b5bd0330.png",
+    "static/media/slider011.814940ac.jpg": "/ZOWEB/static/media/slider011.814940ac.jpg",
+    "static/media/slider04.b146134c.png": "/ZOWEB/static/media/slider04.b146134c.png",
+    "static/media/zobox.bbd565ac.png": "/ZOWEB/static/media/zobox.bbd565ac.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ed0b70ce.js",
+    "static/css/2.0cfd61ed.chunk.css",
+    "static/js/2.11a9e7a8.chunk.js",
+    "static/css/main.d556a552.chunk.css",
+    "static/js/main.018bff7b.chunk.js"
+  ]
+}
