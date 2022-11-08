@@ -6,7 +6,8 @@ import Button from "../UI/Button/Button";
 import "../UI/Button/Button.css";
 import zobox from "../../assets/zobox.png";
 import Feature from "../features/Features"
-import { BrowserRouter ,Link ,  Route, Routes} from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 import "./Navbar.css";
 
@@ -20,7 +21,9 @@ const Navbar = () => {
     <nav className="navbar ">
     
       <div className="logo">
+       <Link to="/home"> 
       <img src={zobox} height="70x"/>
+      </Link>
         <div className="logo-text">
          
         </div>
@@ -31,9 +34,8 @@ const Navbar = () => {
           id={showMenu ? "nav-links-mobile" : "nav-links-mobile-hide"}
         >
 
-<BrowserRouter>
           <li>
-          <Link class="nav-link" to="/feature">
+          <Link class="nav-link" to="/about">
             Abouts
             </Link>
           </li>
@@ -56,14 +58,10 @@ const Navbar = () => {
             </a>
           </li> */}
           <li className="nav-btn">
-            <Button text={"Shop Now"} btnClass={"btn-dark"} href={"#faq"} />
+            <Button text={"Shop Now"} btnClass={"btn-dark"} href={"http://mobile-n-you.surge.sh/category#"} />
           </li>
 
-              <Routes>
-                        <Route path="/feature" component={Feature}/>
-                      
-              </Routes>
-  </BrowserRouter>
+
         </ul>
       </menu>
       <div className="menu-icons" onClick={toggleMenu}>

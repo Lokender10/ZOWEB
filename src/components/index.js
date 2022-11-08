@@ -16,6 +16,7 @@ export { default as Testimonial } from "../components/testimonials/Testimonial";
 export { default as Resellcarousel } from "./Resellcarousel/Resellcarousel" ;
 export { default as Appdown } from "./downloadapp/Appdown" ;
 export {default as News} from "./news/News";
+export {default as Contactus} from "../Pages/contact/contact";
 
 
 

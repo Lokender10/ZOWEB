@@ -1,0 +1,115 @@
+.full-con{
+    background-color: #efefef;
+    padding: 50px 0;
+  }
+  .join{
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+  .join .join-img img{
+    width: 100%;
+  }
+  .join .join-heading{
+    margin-top: 50px;
+  }
+  .join .join-heading .my-btn{
+    width:150px;
+  }
+   .my-btn{
+    background-color: #2981359f;
+    border: 1px solid transparent;
+    margin-top: 20px;
+    width: 140px;
+    height: 43px;
+  }
+  .join-heading h3{
+    position: relative;
+    z-index: 1;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  .join-heading h3::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    background-color: #293381;
+    height: 4px;
+    bottom: -5px;
+    left: 25px;
+   border-radius: 20%;
+  }
+  .join-heading h2{
+    margin-bottom: 25px;
+  }
+   .journery-heading{
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .journery-heading h2{
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  .my-btn:hover{
+    background-color: #293381;
+    border: #293381;
+  }
+  .grow{
+    margin-bottom: 70px;
+  }
+  .grow-div{
+    text-align: center;
+    border-right: 1px solid #ddd;
+    margin-top: 30px;
+   
+  }
+  .grow-div i{
+    background-color:#293381;
+    color: #fff;
+    padding: 14px;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .grow-div p{
+    color: #797D7F;
+  }
+  .grow-border{
+    border: none;
+  }
+  .store{
+    margin-bottom: 30px;
+  }
+  .store .store-div{
+    box-shadow: 0 0 12px #f4f4f4;
+    background-color: #fff;
+    border-radius: 6px;
+    margin-bottom: 30px;
+  }
+  .store .store-div:hover{
+    box-shadow: 0 10px 22px 10px rgb(27 38 49 / 10%);
+  }
+  .store-div img{
+    width: 100%;
+    height: 100%;
+  }
+  .store-div i{
+    color: orange;
+  }
+  .store-div .store-margin{
+    margin-top: 20px;
+  }
+  .store-margin .my-btn{
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .store-margin p{
+    color: #6b6969;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .store-margin .my-btn i{
+    color: #fff;
+    margin-right: 6px;
+  }
