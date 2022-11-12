@@ -34,7 +34,8 @@
   text-align: center;
 }
 .features-left img {
-  width: 80%;
+  width: 70%;
+  height: auto;
 }
 .features-right {
   flex: 1;

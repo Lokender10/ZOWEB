@@ -27,7 +27,7 @@ const Features = props => {
         </div>
         <div className="features-content">
           <div className="features-left overflow" data-aos="fade-right">
-            <img src={props.imgsrc} alt="phone" />
+            <img src={props.imgsrc } alt="phone" />
           </div>
           <div className="features-right" data-aos="fade-left">
             {FeatureList.map((feature) => (

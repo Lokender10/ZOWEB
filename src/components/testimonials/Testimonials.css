@@ -1,5 +1,5 @@
 .testimonial{
-    margin: 0 10%;
+    margin: 10% 10% !important;
 }
 .testimonial .slick-arrow.slick-prev,
 .testimonial .slick-arrow.slick-next {

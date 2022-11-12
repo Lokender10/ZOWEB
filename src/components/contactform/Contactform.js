@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./Subscribe.css";
+import "./Contactform.css";
 import daimg from "../../assets/daimg.png";
 import { TiSocialGooglePlus } from "react-icons/ti";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
@@ -7,12 +7,11 @@ import img4 from "../../assets/front1.png";
 import img1 from "../../assets/step01.png";
 import img2 from "../../assets/step02.png";
 import img3 from "../../assets/step03.png";
-import imgform from "../../assets/leftmen.png";
-// import imgform from " ";
+import imgform from "../../assets/menright.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Subscribe = () => {
+const Contactform = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -22,7 +21,7 @@ const Subscribe = () => {
 
     <>
 
-    <section id="b_partner" class="section-padding"  >
+    {/* <section id="b_partner" class="section-padding"  >
       <div class="container">
         <div class="section-header text-center" data-aos="fade-up">          
           <h2 class="section-title wow fadeInUp animated" data-wow-delay="0.5s" style={{visibility:'visible',animationdelay: '0.5s',animationdelay:' 0.5s',animationdelay:'0.5s'}}>How To Become A Partner</h2>
@@ -65,25 +64,25 @@ const Subscribe = () => {
           </div>	
         </div>
       </div>
-    </section>
+    </section> */}
    
+    
+
    {/* form start */}
     <section id="subscribe" className="row">
-      <div className="container subscribe col-md-5" data-aos="fade-up">
-        <h2>Join Us!</h2>
+      <div className="container subscribe col-md-6" data-aos="fade-up">
+        <h2>Contact Us</h2>
         <form>
           <div className="form">
-            <input type="text" placeholder="Your Name" /><br/><br/>
-            <input type="text" placeholder="Phone No." /> <br/><br/>
-            <input type="text" placeholder="Your Email" /> <br/><br/>
-            <input type="text" placeholder="Current Business" /> <br/><br/>
-            <input type="text" placeholder="Your City" /> <br/><br/>
-            <input type="text" placeholder="Your Pincode" /> <br/><br/>
-            <input type="text" placeholder="Shop Type" /> <br/><br/>
-            <button>Join Now</button>
+            <input type="text" placeholder="Name" /><br/><br/>
+            <input type="Address" placeholder="Address" /> <br/><br/>
+            <input type="phone" placeholder="Phone No." /> <br/><br/>
+            <input type="email" placeholder="Your Email" /> <br/><br/>
+
+            <button>Submit</button>
           </div>
-        </form>  
-        {/* <div className="social-icons">
+         </form>
+         <div className="social-icons">
           <div className="social-icon">
             <TiSocialGooglePlus />
           </div>
@@ -96,9 +95,9 @@ const Subscribe = () => {
           <div className="social-icon">
             <FaInstagram />
           </div>
-        </div>  */}
+        </div>
       </div>
-      <div className="col-md-7" >
+      <div className="col-md-6" >
       <img src={imgform}  id="sideimage"></img>
       </div>
     </section>
@@ -106,4 +105,4 @@ const Subscribe = () => {
   );
 };
 
-export default Subscribe;
+export default Contactform;

@@ -7,6 +7,11 @@ import "./App.css";
 // import Footer from "./components/footer/Footer";
 import about from "../src/assets/headimg.png";
 import img2 from "../src/assets/vivo.png";
+import img3 from "../src/assets/about.png";
+import img4 from "../src/assets/whypart.png";
+import img5 from "../src/assets/letsgrow.png";
+// import {  HowitlistList} from "./allData/Howitdata";
+// import Feature from "./components/features/Feature";
 
 import {
   BrowserRouter,
@@ -31,7 +36,8 @@ import {
   Resellcarousel,
   Appdown,
   News,
-  Contactus
+  PartnerBenefits,
+  Contactform
   
 } from "./components";
 
@@ -88,7 +94,8 @@ function App() {
             </>
             <Carousel />
             <Features imgsrc={about} title={"About Us"} data-aos="fade-up" />
-            <Howworks /><Features imgsrc={img2} title={"Buy From Zobox"} data-aos="fade-up" />
+            <Howworks imgsrc={about} title={"How It Works"} data-aos="fade-up"/>
+            <Features imgsrc={img2} title={"Buy From Zobox"} data-aos="fade-up" />
             <Subscribe />
             <Counter />
             <PartCarousel />
@@ -110,16 +117,37 @@ function App() {
           } />
           <Route path="/About"  element={
           <><br/><br/><br/><br/><Navbar />
-           <Features imgsrc={about} title={"About Us"} data-aos="fade-up" />
+           <Features imgsrc={about} title={"About Us"}
+            // {Howitlist.map((feature) => (
+            //   <Feature
+            //     // key={feature.id}
+            //     // icon={feature.icon}
+            //     // heading={feature.heading}
+            //     text={feature.text}
+            //   />
+            // ))}
+            data-aos="fade-up" />
            <Features imgsrc={about} title={"Mission"} data-aos="fade-up" />
            <Features imgsrc={about} title={"Vision"} data-aos="fade-up" />
            <Features imgsrc={about} title={"Unique Features"} data-aos="fade-up" />
            <Footer/></>
              } />
-          <Route path="/Contact"  element={<><Navbar /><Contactus/></>   } />
-          <Route path="/BecomePartner"  element={<><Navbar /><br/><br/><Subscribe/><Footer/></>   } />
+          {/* <Route path="/Contact"  element={<><Navbar /><Contactus/></>   } /> */}
+          <Route path="/BecomePartner"  element={<><Navbar />
+          <br/><br/><br/><br/>
+          <Howworks  imgsrc={img4} title={"Why Partneter With Us"} data-aos="fade-up"/>
+          <br/><br/><br/><br/>
+          <Features imgsrc={img5} title={"Lets Grow Together"} 
+          data-aos="fade-up"
+          />
+          <PartnerBenefits/>
+          <Subscribe/><Footer/></>   } />
           <Route path="/News"  element={<><Navbar /><br/><br/><News/></>   } />
-          <Route path="/Query"  element={<><Navbar /><br/><br/><Contactus/></>   } />
+          {/* <Route path="/Query"  element={<><Navbar /><br/><br/><Contactus/></>   } /> */}
+          <Route path="/Download"  element={<><Navbar /><br/><br/><Appdown/><Footer/></>   } />
+          <Route path="/Testimonial"  element={<><Navbar /><br/><br/><Testimonial/><Footer/></>   } />
+          <Route path="/Partner"  element={<><Navbar /><br/><br/><PartnerBenefits/><Footer/></>   } />
+          <Route path="/Contact"  element={<><Navbar /><br/><br/><Contactform/><Footer/></>   } />
       </Routes>
     </BrowserRouter>
   </div>

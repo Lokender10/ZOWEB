@@ -9,7 +9,7 @@ import { howworkList} from "./data";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Howworks = () => {
+const Howworks = props => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -19,7 +19,7 @@ const Howworks = () => {
     <section id="howworks">
       <div className=" howworks">
         <div className="title" data-aos="fade-up">
-          <h2>How It Works</h2>
+          <h2>{props.title}</h2>
           {/* <p className="u-text-small">
             SocialX app has Lorem ipsum dolor sit amet consectetur adipisicing
             elit. Sequi labore, harum officiis error quia cupiditate?
@@ -38,7 +38,7 @@ const Howworks = () => {
           </div>
           
           <div className="howworks-left" data-aos="fade-right">
-            <img src={about} alt="phone" />
+            <img src={props.imgsrc} alt="phone" />
           </div>
         </div>
       </div>

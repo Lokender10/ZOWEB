@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import download_app from "../../assets/download_app.png";
 import pngwing from "../../assets/pngwing.com.png";
 import apple from "../../assets/apple.png";
+import zobiz1 from "../../assets/zobiz1.png";
 const Appdown = () => {
   useEffect(() => {
     AOS.init({
@@ -29,7 +30,7 @@ const Appdown = () => {
       </div>
     </div>
       <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight animated" data-wow-delay="0.3s" style={{visibility: 'visible' ,animationdelay:' 0.3s' ,delay: '0.3s', animationdelay: '0.3s'}}>
-      <div class="img_box"><img class="img-fluid" src={download_app} alt="Download SuperSale App"/></div>
+      <div class="img_box"><img class="img-fluid" src={zobiz1} alt="Download SuperSale App"/></div>
     </div>
   </div>
 </div>

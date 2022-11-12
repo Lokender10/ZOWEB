@@ -36,20 +36,28 @@ const Navbar = () => {
 
           <li>
           <Link class="nav-link" to="/about">
-            Abouts
+            About Us
             </Link>
           </li>
           <li>
-            <a href="#">Partners</a>
+          <Link class="nav-link" to="/BecomePartner">
+            Partners
+            </Link>
           </li>
           <li>
-            <a href="#features">Blog</a>
+          <Link class="nav-link" to="/Download">
+            Downloads
+            </Link>
           </li>
           <li>
-            <a href="#download">Download</a>
+          <Link class="nav-link" to="/Testimonial">
+            Testimonial
+            </Link>
           </li>
           <li>
-            <a href="#subscribe">Partners</a>
+          <Link class="nav-link" to="/about">
+            Contact Us
+            </Link>
           </li>
 
           {/* <li>
