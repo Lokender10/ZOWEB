@@ -62,14 +62,14 @@ const Card = ({ img }) => {
           marginBottom: 20,
         }}
       />
-      <p>
+      <p className="testimonial-content">
         Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia.
         Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan
         tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt
         fringilla massa. Etiam hendrerit dolor eget rutrum
       </p>
       <p style={{ fontStyle: "italic", marginTop: 25 }}>
-        <span style={{ fontWeight: 500, color: "green" }}>PAULA WILSON</span> ,
+        <span style={{ fontWeight: 500, color: " #2b367f" }}>PAULA WILSON</span> ,
         Media Analyst
       </p>
     </div>

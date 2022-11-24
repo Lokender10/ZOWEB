@@ -1,0 +1,25 @@
+.title h2 {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: var(--dark-text);
+ 
+  }
+
+ .buyrow{
+  padding: 1%;
+  width: 100%;
+
+ } 
+#sideimage{
+    width: 90%;
+    height: auto;
+    padding: 1%;
+    margin:auto 6%;
+  }
+
+  .buyrow img:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+  }

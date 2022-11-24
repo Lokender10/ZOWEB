@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
 section#footer {
-  background: linear-gradient(to top, #780206, #061161);
+  background: #2b367f;
   color: #fff;
 }
 
@@ -8,6 +10,8 @@ section#footer {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   row-gap: 2rem;
   column-gap: 2rem;
+
+
 }
 
 /* .footer > * {
@@ -16,6 +20,7 @@ section#footer {
 } */
 
 .footer h4 {
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.4;
@@ -24,7 +29,12 @@ section#footer {
 }
 
 .footer-box .footer-links a {
-  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 1.5rem;
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
 .footer-links {
@@ -33,17 +43,44 @@ section#footer {
 }
 
 .footer-links a{
+  font-family: 'Montserrat', sans-serif !important;
   text-decoration: none;
   color: #fff;
   align-items: center;
   margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 1.5rem;
 
 }
 
 .footer-contact p {
+  font-family: 'Montserrat', sans-serif !important;
   display: flex;
   align-items: center;
   margin-bottom: 5px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+
+}
+.copy{
+  position: relative;
+
+}
+
+.zobizlogo{
+  width: 30vh;
+  height: auto;
+  margin-left: 8rem;
+  top: 2%;
+}
+
+.copyright{
+  font-family: 'Montserrat', sans-serif !important; 
+  position: absolute;
+  text-align: center;
+  font-size:15px ;
+  margin: auto 10% ;
+  width: 80vw;
+  top:1rem;
 
 }

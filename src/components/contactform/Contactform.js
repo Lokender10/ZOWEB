@@ -7,7 +7,7 @@ import img4 from "../../assets/front1.png";
 import img1 from "../../assets/step01.png";
 import img2 from "../../assets/step02.png";
 import img3 from "../../assets/step03.png";
-import imgform from "../../assets/menright.png";
+import imgform from "../../assets/Contactus.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -67,7 +67,7 @@ const Contactform = () => {
     </section> */}
    
     
-
+    
    {/* form start */}
     <section id="subscribe" className="row">
       <div className="container subscribe col-md-6" data-aos="fade-up">

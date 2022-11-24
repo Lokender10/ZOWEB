@@ -3,7 +3,7 @@ import "./Howworks.css";
 import { BsFillBookmarkStarFill } from "react-icons/bs";
 import about from "../../assets/about.png";
 import Feature from "./Howwork";
-import { howworkList} from "./data";
+// import { howworkList} from "../../allData/Missiondata";
 
 
 import AOS from "aos";
@@ -27,14 +27,7 @@ const Howworks = props => {
         </div>
         <div className="howworks-content">
           <div className="howworks-right" data-aos="fade-left">
-            {howworkList.map((feature) => (
-              <Feature
-                // key={feature.id}
-                // icon={feature.icon}
-                // heading={feature.heading}
-                text={feature.text}
-              />
-            ))}
+          {props.content}
           </div>
           
           <div className="howworks-left" data-aos="fade-right">

@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 .testimonial{
-    margin: 10% 10% !important;
+    margin: 5% 5% !important;
 }
 .testimonial .slick-arrow.slick-prev,
 .testimonial .slick-arrow.slick-next {
@@ -37,3 +38,14 @@
     margin: 1.5rem 0;
   }
   
+  .testimonial-content{
+    font-weight: 300;
+    line-height: 1.4;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
+    color:#343A40;
+    text-decoration:none solid rgb(52, 58, 64);
+    font-size:12px;
+    
+  }

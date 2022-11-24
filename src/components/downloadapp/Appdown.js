@@ -13,15 +13,15 @@ const Appdown = () => {
     });
   }, []);
   return (
-    <section id="download_app" class="bg-gray section-padding wow fadeIn animated"   data-wow-delay=".1s" style={{visibility: 'visible',delay:' .1s' ,delay: '.1s', animationdelay:' .1s'}}>
+    <section id="download_app" class="section-padding wow fadeIn animated"   data-wow-delay=".1s" style={{visibility: 'visible',delay:' .1s' ,delay: '.1s', animationdelay:' .1s'}}>
     <div class="container">
   <div class="row">
-      <div class="col-lg-6 col-md-12 col-xs-12 info" data-aos="fade-right">
+      <div class="col-lg-6 col-md-12 col-xs-12" data-aos="fade-right">
       <div class="wow fadeInLeft animated" data-wow-delay="0.3s" style={{visibility: 'visible', delay: '0.3s', delay:' 0.3s', animationdelay: '0.3s'}}>
         <div id="down_app">
           <div class="content text-dark text-left">
-                <h1>So what are you<br/> waiting for?</h1>
-              <p>Simply download the <span>Super<span class="teal">Sale</span></span> app,
+                <h1>So what are you waiting for?</h1>
+              <p>Simply download the <span>Zobiz</span> app,
               become a partner and start ordering mobile phones at best rates.</p>
               <div id="down_icon"><a href="https://bit.ly/3cg1ulH" target="_blank"><img src={pngwing} alt="play"/></a> &nbsp;
               <a href="https://apple.co/3vMkz6X" target="_blank"><img src={apple} alt="app"/></a></div>

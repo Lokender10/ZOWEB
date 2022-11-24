@@ -8,6 +8,7 @@ import {
   FaEnvelope,
   FaGlobe,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -16,7 +17,7 @@ const Footer = () => {
         <div className="footer-box">
           <h4>Useful Links</h4>
           <div className="footer-links">
-            <a href="#">&bull; Support</a>
+            <Link to="/Privacy"><a>&bull; Privacy Policy</a></Link>
             <a href="#">&bull; About</a>
             <a href="#">&bull; Learn</a>
             <a href="#">&bull; Hosting</a>
@@ -54,9 +55,11 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-box">
-          <img src={zobox} alt="logo" height={120} />
-          <p className="u-text-small">&copy; Copyright 2021. Zobox.in</p>
+          <img src={zobox} alt="logo" className="zobizlogo"/>
         </div>
+      </div>
+      <div className="copy">
+      <p className="copyright">&copy; Copyright 2021 Zobox.in</p>
       </div>
     </section>
   );

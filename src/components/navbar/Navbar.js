@@ -5,7 +5,7 @@ import { SiAnaconda } from "react-icons/si";
 import Button from "../UI/Button/Button";
 import "../UI/Button/Button.css";
 import zobox from "../../assets/zobox.png";
-import Feature from "../features/Features"
+import Feature from "../features/Features";
 import { Link } from "react-router-dom";
 
 
@@ -13,6 +13,9 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const top =() => {
+    window.scrollTo(0,0);
+  };
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -22,7 +25,7 @@ const Navbar = () => {
     
       <div className="logo">
        <Link to="/home"> 
-      <img src={zobox} height="70x"/>
+      <img src={zobox} onClick={top} height="70x"/>
       </Link>
         <div className="logo-text">
          
@@ -35,27 +38,27 @@ const Navbar = () => {
         >
 
           <li>
-          <Link class="nav-link" to="/about">
+          <Link class="nav-link" to="/about" onClick={top}>
             About Us
             </Link>
           </li>
           <li>
-          <Link class="nav-link" to="/BecomePartner">
+          <Link class="nav-link" to="/BecomePartner" onClick={top}>
             Partners
             </Link>
           </li>
           <li>
-          <Link class="nav-link" to="/Download">
+          <Link class="nav-link" to="/Download" onClick={top}>
             Downloads
             </Link>
           </li>
           <li>
-          <Link class="nav-link" to="/Testimonial">
+          <Link class="nav-link" to="/Testimonial" onClick={top}>
             Testimonial
             </Link>
           </li>
           <li>
-          <Link class="nav-link" to="/about">
+          <Link class="nav-link" to="/contact" onClick={top}>
             Contact Us
             </Link>
           </li>

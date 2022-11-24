@@ -1,5 +1,5 @@
 .PartCarousel-head{
-  margin: 15rem 0;
+  margin: 10rem 0;
   padding: 2.5rem;
   width: 100%;}
 
@@ -9,6 +9,6 @@
     line-height: 1.4;
     text-transform: uppercase;
     color: var(--dark-text);
-    margin: 1.5rem 0;
+    margin: 1rem 0;
   }
   

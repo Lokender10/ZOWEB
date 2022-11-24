@@ -10,14 +10,13 @@
 .subscribe h2 {
   font-size: 3rem;
   font-weight: 200;
-  line-height: 1.4;
+  line-height: 1;
   text-transform: uppercase;
-  margin: 1.5rem 0;
   padding-bottom: 1rem;
 }
 
 form > * {
-  width: 100%;
+  width: 80%;
   max-width: 50rem;
   margin: 3rem auto;
 }
@@ -25,7 +24,7 @@ form > * {
 form input {
   padding: 1rem;
   background: transparent;
-  border: 1px solid #1f2469;
+  border: 2px solid #1f2469;
   border-radius: 5px;
   color: black;
   outline: none;
@@ -86,8 +85,14 @@ form button {
 }
 
 
+#b_partner {
+  width: 95%;
+  margin: 5% auto;
+
+}
 #b_partner .img-box {
-  padding: 40px 40px 10px 40px;
+  padding: 40px 40px 10px 40px !important;
+
   position: relative;
 }
 #b_partner .img-box i {
@@ -107,21 +112,23 @@ form button {
   left: 45%;
 }
 .b_partner-header .b_title {
-  text-align: center;
-  color: #333;
-  line-height: 1.6;
-  position: relative;
-  margin-top: 5px;
-  font-size: small;
+  font-size: 1.5rem !important;
+  font-weight: 500 !important;
+  line-height: 1.4;
+  font-family: 'Poppins', sans-serif;
+  text-align: justify;
+  text-justify: inter-word;
+  color: #1f2469!important;
 }
 
 .section-title{
-  font-size: 4rem;
-  font-weight: 400;
-  line-height: 1;
-  text-transform: uppercase;
-  color: var(--dark-text);
-  margin: 0.5rem 0;
+  font-size:30px !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight:700 !important;
+  line-height: 1.4 !important;
+  text-transform: uppercase !important;
+  color: #2b367fbf !important;
+  line-height:36px !important;
 }
 
 .b_partner-header .b_title span {

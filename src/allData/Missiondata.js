@@ -2,7 +2,7 @@ import { FaAccessibleIcon, FaGg } from "react-icons/fa";
 import { SiDatabricks } from "react-icons/si";
 import { MdConnectWithoutContact } from "react-icons/md";
 
-export const FeatureList = [
+export const MissionList = [
   {
     id: 1,
     icon: <FaAccessibleIcon color="#0a1930" size={22} />,

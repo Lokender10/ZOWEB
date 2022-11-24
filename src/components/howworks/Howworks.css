@@ -7,6 +7,9 @@
 .howworks{
   margin: 0 7%;
 }
+#howworks{
+  background: #fff;
+}
 .title h2 {
   font-size: 4rem;
   font-weight: 400;
@@ -20,7 +23,8 @@
   width: 50%;
   min-width: 40rem;
   margin: 0 auto;
-  color: var(--dark-text);
+  color: black;
+
 }
 
 .howworks-content {
@@ -34,7 +38,9 @@
   text-align: center;
 }
 .howworks-left img {
-  width: 70%;
+  width: 80%;
+  height: auto;
+  margin:-1% auto;
 }
 .howworks-right {
   flex: 1;

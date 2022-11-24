@@ -1,7 +1,13 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+
 .feature {
   display: flex;
   align-items: flex-start;
   margin-bottom: 2rem;
+  background:#fff;
 }
 
 .feature-icon {
@@ -17,15 +23,23 @@
 }
 
 .feature-text h3 {
-  font-size: 5rem;
-  font-weight: 200;
+  font-size:30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:700;
   line-height: 1.4;
   text-transform: uppercase;
   color: var(--light-blue);
+  line-height:36px;
 }
 .feature-text p {
-  font-size: 1.8rem;
-  font-weight: 200;
+ 
+  font-weight: 500;
   line-height: 1.4;
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  text-justify: inter-word;
+  color:#343A40;
+  text-decoration:none solid rgb(52, 58, 64);
+  font-size:14px;
 
 }

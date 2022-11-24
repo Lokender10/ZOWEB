@@ -24,7 +24,7 @@ const News = props => {
     </div>
         </div>
         <Slider {...settings}>
-        <div className='container d-flex justify-content-center mb-5'>
+        <div className='container d-flex  mb-5'>
        
             <div className='row'>
              <div className='col-md-3'>

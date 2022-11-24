@@ -1,7 +1,6 @@
 import React from "react";
 import "./Howwork.css";
-import { FaAccessibleIcon } from "react-icons/fa";
-import { BsHexagon } from "react-icons/bs";
+
 
 const Howwork = ({ icon, heading, text }) => {
   return (

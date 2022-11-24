@@ -18,6 +18,9 @@ export { default as Appdown } from "./downloadapp/Appdown" ;
 export {default as News} from "./news/News";
 export {default as PartnerBenefits} from "./partnersec/Partnersec";
 export {default as Contactform} from "./contactform/Contactform";
+export {default as Buyfrom} from "./Buyfrom/Buyfrom";
+export {default as Privacy} from "./Privacy/privacy";
+export {default as Testimonial2} from "./testimonial2/Testimonial2";
 
 
 

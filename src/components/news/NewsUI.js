@@ -3,7 +3,7 @@ import'./newsstyle.css';
 
 const NewsUI = props => {
     return (
-        <div className='container-fluid card text-center'>
+        <div className='card text-center' style={{width:"100%"}}>
             <div className='overflow'>
                 <img src={props.imgsrc} alt="news" className='card-img-top'/>
             </div>

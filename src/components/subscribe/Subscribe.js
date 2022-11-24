@@ -23,7 +23,7 @@ const Subscribe = () => {
     <>
 
     <section id="b_partner" class="section-padding"  >
-      <div class="container">
+      <div class="">
         <div class="section-header text-center" data-aos="fade-up">          
           <h2 class="section-title wow fadeInUp animated" data-wow-delay="0.5s" style={{visibility:'visible',animationdelay: '0.5s',animationdelay:' 0.5s',animationdelay:'0.5s'}}>How To Become A Partner</h2>
           <div class="shape wow fadeInLeft animated" data-wow-delay="0.6s" style={{visibility: 'visible',animationdelay:'0.6s',animationdelay:'0.6s', animationdelay: '0.6s'}}></div>
@@ -37,7 +37,7 @@ const Subscribe = () => {
                 <img class="img-fluid" src={img1} alt="Download App" />
               </div>
               <div class="b_partner-header">
-                <p class="b_title"> Download app from <br/> <span>Google Play/App Store</span></p>
+                <p class="b_title"> Fill Form For Join Us At <br/> <span>Zobox.in</span></p>
               </div>
             </div> 
           </div>
@@ -48,7 +48,7 @@ const Subscribe = () => {
                 <img class="img-fluid"src={img2} alt="Register Yourself"/>
               </div>
               <div class="b_partner-header">
-                <p class="b_title"> Register yourself using your GST Registration or Shop &amp; Establishment Registration or Udyog Aadhaar </p>
+                <p class="b_title"> Our Sales Person Contact And Register You As A Partner On Zobiz App </p>
               </div>
             </div> 
           </div>
@@ -70,7 +70,7 @@ const Subscribe = () => {
    {/* form start */}
     <section id="subscribe" className="row">
       <div className="container subscribe col-md-5" data-aos="fade-up">
-        <h2>Join Us!</h2>
+        <h2>Become a Partner!</h2>
         <form>
           <div className="form">
             <input type="text" placeholder="Your Name" /><br/><br/>
@@ -80,7 +80,7 @@ const Subscribe = () => {
             <input type="text" placeholder="Your City" /> <br/><br/>
             <input type="text" placeholder="Your Pincode" /> <br/><br/>
             <input type="text" placeholder="Shop Type" /> <br/><br/>
-            <button>Join Now</button>
+            <button>Submit</button>
           </div>
         </form>  
         {/* <div className="social-icons">

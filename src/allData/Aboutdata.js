@@ -2,7 +2,7 @@ import { FaAccessibleIcon, FaGg } from "react-icons/fa";
 import { SiDatabricks } from "react-icons/si";
 import { MdConnectWithoutContact } from "react-icons/md";
 
-export const howworkList = [
+export const AboutList = [
   {
     id: 1,
     icon: <FaAccessibleIcon color="#0a1930" size={22} />,
@@ -21,10 +21,10 @@ export const howworkList = [
     heading: "Stay Connected",
     text: " Our team has grown to 30 PASSIONATE individuals that are DEVOTED to assist you in maintaining the functionality and up-to-dateness of your beloved smartphone, which is likely the most crucial item in your life.",
   },
-  {
-    id: 4,
-    icon: <FaGg color="#0a1930" size={22} />,
-    heading: "Take control",
-    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae veniam dolorum repellendus obcaecati minus voluptas neque dolore similique.",
-  },
+  // {
+  //   id: 4,
+  //   icon: <FaGg color="#0a1930" size={22} />,
+  //   heading: "Take control",
+  //   text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae veniam dolorum repellendus obcaecati minus voluptas neque dolore similique.",
+  // },
 ];

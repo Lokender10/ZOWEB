@@ -3,7 +3,7 @@ import "./Features.css";
 import { BsFillBookmarkStarFill } from "react-icons/bs";
 import about from "../../assets/about.png";
 import Feature from "./Feature";
-import { FeatureList } from "./data";
+// import { FeatureList } from "../../allData/Aboutdata";
 
 
 import AOS from "aos";
@@ -30,14 +30,15 @@ const Features = props => {
             <img src={props.imgsrc } alt="phone" />
           </div>
           <div className="features-right" data-aos="fade-left">
-            {FeatureList.map((feature) => (
+            {/* {FeatureList.map((feature) => (
               <Feature
                 // key={feature.id}
                 // icon={feature.icon}
                 // heading={feature.heading}
                 text={feature.text}
               />
-            ))}
+            ))} */}
+            {props.content}
           </div>
         </div>
       </div>

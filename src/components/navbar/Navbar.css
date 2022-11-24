@@ -20,6 +20,10 @@
   color: orangered;
 }
 
+ul{
+  align-items: center;
+}
+
 .nav-links {
   display: flex;
   color: #fff;
@@ -41,8 +45,9 @@
 }
 .nav-links a:hover,
 #nav-links-mobile a:hover {
-  color: #0a1930;
-  background-color: #fff;
+  border-bottom:2px solid  #fff;
+  transition: all 0.3s;
+  padding-bottom: 2%;
 }
 
 /* a.btn {
