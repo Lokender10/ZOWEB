@@ -16,6 +16,7 @@ const Header = () => {
       duration: 1000,
     });
   }, []);
+  
   return (
     <section id="header">
       <div className="header">

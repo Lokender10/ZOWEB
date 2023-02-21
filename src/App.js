@@ -20,7 +20,6 @@ import { AboutList } from "./allData/Aboutdata";
 import { MissionList } from "./allData/Missiondata";
 
 import {
-  
   Route,
   Routes,
   Navigate

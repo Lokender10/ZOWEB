@@ -49,9 +49,6 @@ const Footer = () => {
             <p>
               <FaEnvelope /> &nbsp; Email: zobox.in.com
             </p>
-            <p>
-              <FaGlobe /> &nbsp; Website: www.socialx.com
-            </p>
           </div>
         </div>
         <div className="footer-box">

@@ -23,7 +23,7 @@ const Appdown = () => {
                 <h1>So what are you waiting for?</h1>
               <p>Simply download the <span>Zobiz</span> app,
               become a partner and start ordering mobile phones at best rates.</p>
-              <div id="down_icon"><a href="https://bit.ly/3cg1ulH" target="_blank"><img src={pngwing} alt="play"/></a> &nbsp;
+              <div id="down_icon"><a href="https://play.google.com/store/apps/details?id=com.zobox.zobiz" target="_blank"><img src={pngwing} alt="play"/></a> &nbsp;
               <a href="https://apple.co/3vMkz6X" target="_blank"><img src={apple} alt="app"/></a></div>
           </div>
         </div>

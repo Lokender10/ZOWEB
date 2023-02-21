@@ -53,6 +53,7 @@ const PartCarousel = () => {
 
 
 
+
 // export default class SimpleSlider extends Component {
 //   render() {
 //     const settings = {
