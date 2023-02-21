@@ -47,6 +47,12 @@ const Contactform = () => {
             let response = await axios.post("https://zobizapis.el.r.appspot.com/zobiz/saveQuery", body)
             let { data } = response;
              setSaved(data);
+             setErrors({});
+             setName("");
+             setAddress("");
+             setPhone("");
+             setEmail("");
+             setTypeQuery("");
         }
         catch(ex) {
               setError("Failed!");
