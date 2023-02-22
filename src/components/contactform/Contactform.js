@@ -164,10 +164,6 @@ const radius = 85;
             <input type="email" placeholder="Your Email" id="email" name="email" value={email} onChange={(e)=> setEmail(e.currentTarget.value)} /> <br />
             {errors.email ? <span className="text-danger" style={{fontSize: "16px"}}>{errors.email} </span> : ""}
             <br/><br/>
-            <svg width="100" height="100" viewBox={`0, 0 200 200`}>
-              <circle cx="100" cy="100" strokeWidth="15px" r={radius} className="circle-background" />
-              <circle cx="100" cy="100" strokeWidth="15px" r={radius} className="circle-progress" />
-            </svg>
             <button onClick={handleSubmit}>Submit</button>
           </div>
          </form>
