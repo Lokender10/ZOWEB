@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="footer-box">
           <h4>Useful Links</h4>
           <div className="footer-links">
-            <Link to="/Privacy"><a>&bull; Privacy Policy</a></Link>
+            <Link to="/Privacy">&bull; Privacy Policy</Link>
             <a href="#">&bull; About</a>
             <a href="#">&bull; Learn</a>
             <a href="#">&bull; Hosting</a>
