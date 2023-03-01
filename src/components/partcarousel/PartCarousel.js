@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./PartCarousel.css";
 import { data } from "./data";
+import { Helmet } from "react-helmet";
 // import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 
 // const PreviousBtn = (props) => {
@@ -46,6 +47,10 @@ const PartCarousel = () => {
           </div>
         ))}
         </Slider>
+        <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Our Finance Partner" />
+        </Helmet>
       </div>
     );
   

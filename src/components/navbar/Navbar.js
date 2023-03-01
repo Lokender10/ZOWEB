@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 
 
 import "./Navbar.css";
+import { Helmet } from "react-helmet";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -62,6 +63,11 @@ const Navbar = () => {
             Contact Us
             </Link>
           </li>
+          <li>
+          <Link class="nav-link" to="/Blog" onClick={top}>
+            Blog
+            </Link>
+          </li>
 
           {/* <li>
             <a href="#" className="btn btn-dark">
@@ -82,6 +88,10 @@ const Navbar = () => {
           <AiOutlineBars color="#fff" size={27} />
         )}
       </div>
+      <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Zobox || SASTE MOBILE KA ADDAt" />
+        </Helmet>
     </nav>
   );
 };

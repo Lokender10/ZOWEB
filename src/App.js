@@ -1,5 +1,6 @@
 import "./App.css";
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import Navbar from "./components/navbar/Navbar";
 // import Header from "./components/header/Header";
 // import Features from "./components/features/Features";
@@ -47,12 +48,14 @@ import {
   PartnerBenefits,
   Contactform,
   Privacy,
-
   
 } from "./components";
+import BlogPost from "./components/blog/BlogPost";
+import FullBlog from "./components/blog/FullBlog";
 
 class App extends React.Component {
   render(){
+    
   return (
     <><>
 
@@ -196,6 +199,8 @@ class App extends React.Component {
             <Route path="/Partner" element={<><Navbar /><br /><br /><PartnerBenefits /><Footer /></>} />
             <Route path="/Contact" element={<><Navbar /><br /><br /><Contactform /><Footer /></>} />
             <Route path="/Privacy" element={<><Navbar /><br /><br /><Privacy /><Footer /></>} />
+            <Route path="/Blog" element={<><Navbar /><br /><br /><BlogPost /><Footer /></>} />
+            <Route path="/blog/user/:id" element={<><Navbar /><br /><br /><FullBlog /><Footer /></>} />
           </Routes>
       
       </div></>

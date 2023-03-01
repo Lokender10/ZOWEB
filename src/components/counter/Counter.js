@@ -1,5 +1,6 @@
 import React,{Fragment, useState} from "react";
 import CountUp from 'react-countup';
+import { Helmet } from "react-helmet";
 import ScrollTrigger from 'react-scroll-trigger';
 // import VisibilitySensor from "react-visibility-sensor"
 
@@ -145,6 +146,10 @@ const Counter = ({className, ...rest}) => {
            
             
         </div>
+        <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Zobox || SASTE MOBILE KA ADDA" />
+        </Helmet>
         </ScrollTrigger>
 )}
 

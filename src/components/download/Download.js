@@ -5,6 +5,7 @@ import { GrAndroid } from "react-icons/gr";
 import { IconContext } from "react-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 const Download = () => {
   useEffect(() => {
@@ -33,6 +34,10 @@ const Download = () => {
           </div>
         </IconContext.Provider>
       </div>
+      <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Zobox || SASTE MOBILE KA ADDA" />
+        </Helmet>
     </section>
   );
 };

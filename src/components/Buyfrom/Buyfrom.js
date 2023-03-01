@@ -12,6 +12,7 @@ import img5 from "../../assets/buy5.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { height } from "@mui/system";
+import { Helmet } from "react-helmet";
 
 const Buyfrom = props =>{
   useEffect(() => {
@@ -39,6 +40,10 @@ const Buyfrom = props =>{
 
         </div>
         </section>
+        <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content={props.title} />
+            </Helmet>
         </>
   );
 };

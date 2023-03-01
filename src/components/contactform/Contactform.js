@@ -12,6 +12,7 @@ import imgform from "../../assets/Contactus.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 const Contactform = () => {
 
@@ -23,9 +24,30 @@ const Contactform = () => {
      const [error, setError] = useState("");
      const [errors, setErrors] = useState({});
      const [typeofQuery, setTypeQuery] = useState("");
+     const [queryContent, setqueryContent] = useState("");
 
 
 
+/*
+
+
+/*
+      {blog.map((e,index) => (
+                        index > 0 ? 
+                        <Row>
+                        <Col xs={7}>
+                        <Card.Img src={e.image[0]} />
+                        </Col>
+                        <Col xs={5}><h3>{e.title}</h3> 
+                         <p><span style={{color: "darkgray"}}>By : </span> <span style={{color: "blue"}}>{ " "+e.writtenBy}</span></p><br />
+                         <p><span style={{color: "darkgray"}}>Date : </span>{handleDate(e.dateofCreation)}</p><br />
+                        <p>{e.content.substring(0,30)}</p><br />
+                        </Col>
+                        </Row>
+                        : "" 
+                        ))}
+*\
+*/
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -44,6 +66,7 @@ const Contactform = () => {
             body.email = email;
             body.typeofQuery = typeofQuery;
             body.dateofUpdate = new Date();
+            body.queryContent = queryContent;
             let response = await axios.post("https://zobizapis.el.r.appspot.com/zobiz/saveQuery", body)
             let { data } = response;
              setSaved(data);
@@ -53,6 +76,7 @@ const Contactform = () => {
              setPhone("");
              setEmail("");
              setTypeQuery("");
+             setqueryContent("");
         }
         catch(ex) {
               setError("Failed!");
@@ -76,6 +100,7 @@ const Contactform = () => {
     error.phoneNo = validatePhone(phoneNo);
     error.email = validateEmail(email);
     error.typeofQuery = validateTypeofQuery(typeofQuery);
+    error.queryContent = validatequeryContent(queryContent);
      return error;
   }
 
@@ -84,6 +109,8 @@ const Contactform = () => {
  const validatePhone = (phoneNo) =>  !phoneNo ? "Phone number must be entered": "";
  const validateEmail = (email) =>  !email ? "Email must be entered": "";
  const validateTypeofQuery = (typeofQuery) =>  !typeofQuery ? "Select query type": "";
+ const validatequeryContent = (queryContent) =>  !queryContent ? "Enter your query": "";
+
 
 const radius = 85;
   return (
@@ -164,6 +191,9 @@ const radius = 85;
             <input type="email" placeholder="Your Email" id="email" name="email" value={email} onChange={(e)=> setEmail(e.currentTarget.value)} /> <br />
             {errors.email ? <span className="text-danger" style={{fontSize: "16px"}}>{errors.email} </span> : ""}
             <br/><br/>
+            <textarea className="queryContent" name="queryContent" id="queryContent" placeholder="Type your query here" rows={6} cols={58} style={{fontSize:"14px", padding:"4px"}} /> <br />
+            {errors.queryContent ? <span className="text-danger" style={{fontSize: "16px"}}>{errors.queryContent} </span> : ""}
+             <br /> <br />
             <button onClick={handleSubmit}>Submit</button>
           </div>
          </form>
@@ -186,6 +216,10 @@ const radius = 85;
       <img src={imgform}  id="sideimage"></img>
       </div>
     </section>
+    <Helmet>
+            <title>Contact Form</title>
+            <meta name="description" content="Zobox || SASTE MOBILE KA ADDA" />
+        </Helmet>
     </>
   );
 };

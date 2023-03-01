@@ -273,3 +273,9 @@ form button {
   fill: none;
   stroke: #ddd;
 }
+
+@media screen and (max-width: 600px) {
+  .queryContent{
+      width: 275px;
+  }
+}

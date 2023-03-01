@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import'./newsstyle.css';
 
 const NewsUI = props => {
@@ -15,6 +16,10 @@ const NewsUI = props => {
                 </p>
                 <a href='#' className='btn btn-outline-success'>Read more..</a>
             </div>
+            <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="To create a platform that would enable both online and offline purchases of FINEST  Branded Refurbished Mobile Phones. Our business model has been created in such a way" />
+        </Helmet>
         </div>
     );
 };

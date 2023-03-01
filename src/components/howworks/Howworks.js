@@ -8,6 +8,7 @@ import Feature from "./Howwork";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 const Howworks = props => {
   useEffect(() => {
@@ -35,6 +36,10 @@ const Howworks = props => {
           </div>
         </div>
       </div>
+      <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content={props.content.slice(0,50)} />
+        </Helmet>
     </section>
   );
 };

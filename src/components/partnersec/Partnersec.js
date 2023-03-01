@@ -2,6 +2,7 @@ import React from 'react';
 // import signpic from "...images/signup.svg*; 
 import './Partnersec.css';
 import img1 from '../../assets/google.png'
+import { Helmet } from 'react-helmet';
 
  
 const PartnerBenefits = props => {
@@ -53,6 +54,10 @@ const PartnerBenefits = props => {
               </div> */}
           </div>
       </div>
+      <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Get a pre-established customer network and grow customer base" />
+        </Helmet>
   </section>
 
     )

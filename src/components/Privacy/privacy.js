@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 // import "../App.css";
 import {Link} from 'react-router-dom';
 // import zoooobox from "../Img/zoooobox.png";
@@ -325,6 +326,10 @@ Please note that there is always a possibility that a breach in data transmissio
         </div>
 
       </div> */}
+       <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Zobox || SASTE MOBILE KA ADDA" />
+        </Helmet>
 </div> 
   )
 }

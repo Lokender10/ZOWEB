@@ -10,8 +10,6 @@ section#footer {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   row-gap: 2rem;
   column-gap: 2rem;
-
-
 }
 
 /* .footer > * {

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Subscribe.css";
 import daimg from "../../assets/daimg.png";
 import { TiSocialGooglePlus } from "react-icons/ti";
@@ -8,16 +8,87 @@ import img1 from "../../assets/step01.png";
 import img2 from "../../assets/step02.png";
 import img3 from "../../assets/step03.png";
 import imgform from "../../assets/leftmen.png";
+import axios from "axios";
 // import imgform from " ";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 const Subscribe = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
-  }, []);
+
+  const [name, setName] = useState("");
+  const [address, setAddress] = useState("");
+  const [phoneNo, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [savedQuery, setSaved] = useState("");
+  const [error, setError] = useState("");
+  const [errors, setErrors] = useState({});
+  const [typeofQuery, setTypeQuery] = useState("Enquiry");
+  const [queryContent, setqueryContent] = useState("");
+
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let error = validateAll();
+    if(isValid(error)){
+    try{
+        let body = {};
+        body.name = name;
+        body.address = {"Plot":address};
+        body.phoneNo = phoneNo;
+        body.email = email;
+        body.typeofQuery = typeofQuery;
+        body.dateofUpdate = new Date();
+        body.queryContent = queryContent;
+        let response = await axios.post("https://zobizapis.el.r.appspot.com/zobiz/saveQuery", body)
+        let { data } = response;
+         setSaved(data);
+         setErrors({});
+         setName("");
+         setAddress("");
+         setPhone("");
+         setEmail("");
+         setqueryContent("");
+    }
+    catch(ex) {
+          setError("Failed!");
+    }
+  }
+  else {
+    setErrors(error);
+  }
+}
+
+const isValid = (error) => {
+let keys = Object.keys(error);
+let count = keys.reduce((acc, curr) => error[curr] ? acc+1: acc, 0);
+return count === 0;
+}
+
+const validateAll = () => {
+let error = {};
+error.name = validateName(name);
+error.address = validateAddress(address);
+error.phoneNo = validatePhone(phoneNo);
+error.email = validateEmail(email);
+error.queryContent = validatequeryContent(queryContent);
+ return error;
+}
+
+const validateName = (name) =>  !name ? "Name must be entered": "";
+const validateAddress = (address) =>  !address ? "Address must be entered": "";
+const validatePhone = (phoneNo) =>  !phoneNo ? "Phone number must be entered": "";
+const validateEmail = (email) =>  !email ? "Email must be entered": "";
+const validatequeryContent = (queryContent) =>  !queryContent ? "Enter your query": "";
+
+
+useEffect(() => {
+  AOS.init({
+    duration: 1000,
+  });
+}, []);
+
   return (
 
     <>
@@ -71,16 +142,25 @@ const Subscribe = () => {
     <section id="subscribe" className="row">
       <div className="container subscribe col-md-5" data-aos="fade-up">
         <h2>Become a Partner!</h2>
+        {savedQuery ? <span className="text-success" style={{fontSize:"16px"}}>{savedQuery}</span> : error? <span className="text-danger" style={{fontSize:"25px"}}>{error}</span> : ""}
         <form>
-          <div className="form">
-            <input type="text" placeholder="Your Name" /><br/><br/>
-            <input type="text" placeholder="Phone No." /> <br/><br/>
-            <input type="text" placeholder="Your Email" /> <br/><br/>
-            <input type="text" placeholder="Current Business" /> <br/><br/>
-            <input type="text" placeholder="Your City" /> <br/><br/>
-            <input type="text" placeholder="Your Pincode" /> <br/><br/>
-            <input type="text" placeholder="Shop Type" /> <br/><br/>
-            <button>Submit</button>
+        <div className="form">
+            <input type="text" placeholder="Name" id="name" name="name" value={name} onChange={(e)=> setName(e.currentTarget.value)} /><br />
+            {errors.name ? <span className="text-danger" style={{fontSize:"16px"}}>{errors.name} </span> : ""}
+            <br/><br/>
+            <input type="text" placeholder="Address" id="address" name="address" value={address} onChange={(e)=> setAddress(e.currentTarget.value)} /><br />
+            {errors.address ? <span className="text-danger" style={{fontSize: "16px"}}>{errors.address} </span> : ""}
+             <br/><br/>
+            <input type="phone" placeholder="Phone No." id="phoneNo" name="phoneNo" value={phoneNo} onChange={(e)=> setPhone(e.currentTarget.value)} /><br />
+            {errors.phoneNo ? <span className="text-danger" style={{fontSize: "16px"}}>{errors.phoneNo} </span> : ""}
+             <br/><br/>
+            <input type="email" placeholder="Your Email" id="email" name="email" value={email} onChange={(e)=> setEmail(e.currentTarget.value)} /> <br />
+            {errors.email ? <span className="text-danger" style={{fontSize: "16px"}}>{errors.email} </span> : ""}
+            <br/><br/>
+            <textarea className="queryContent" name="queryContent" id="queryContent" placeholder="Type your query here" rows={6} cols={58} style={{fontSize:"14px", padding:"4px"}} /> <br />
+            {errors.queryContent ? <span className="text-danger" style={{fontSize: "16px"}}>{errors.queryContent} </span> : ""}
+             <br /> <br />
+            <button onClick={handleSubmit}>Submit</button>
           </div>
         </form>  
         {/* <div className="social-icons">
@@ -102,6 +182,10 @@ const Subscribe = () => {
       <img src={imgform}  id="sideimage"></img>
       </div>
     </section>
+    <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Zobox || SASTE MOBILE KA ADDA" />
+        </Helmet>
     </>
   );
 };

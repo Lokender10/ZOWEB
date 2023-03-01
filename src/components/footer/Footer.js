@@ -9,6 +9,7 @@ import {
   FaGlobe,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Footer = () => {
   return (
@@ -58,6 +59,10 @@ const Footer = () => {
       <div className="copy">
       <p className="copyright">&copy; Copyright 2021 Zobox.in</p>
       </div>
+      <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Zobox || SASTE MOBILE KA ADDAt" />
+        </Helmet>
     </section>
   );
 };

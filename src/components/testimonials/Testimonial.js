@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../testimonials/Testimonials.css";
 import { Avatar } from "@material-ui/core";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+import { Helmet } from "react-helmet";
 
 const PreviousBtn = (props) => {
   console.log(props);
@@ -72,6 +73,10 @@ const Card = ({ img }) => {
         <span style={{ fontWeight: 500, color: " #2b367f" }}>PAULA WILSON</span> ,
         Media Analyst
       </p>
+      <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Testimonial" />
+        </Helmet>
     </div>
   );
 };

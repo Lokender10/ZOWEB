@@ -6,6 +6,7 @@ import download_app from "../../assets/download_app.png";
 import pngwing from "../../assets/pngwing.com.png";
 import apple from "../../assets/apple.png";
 import zobiz1 from "../../assets/zobiz1.png";
+import { Helmet } from "react-helmet";
 const Appdown = () => {
   useEffect(() => {
     AOS.init({
@@ -34,6 +35,10 @@ const Appdown = () => {
     </div>
   </div>
 </div>
+<Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Zobox || SASTE MOBILE KA ADDA" />
+        </Helmet>
 </section>
   );
 };

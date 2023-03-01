@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 // import "../App.css";
 import "../contact/contact.css";
 
@@ -42,6 +43,10 @@ const contactus =() => {
             </div>
         </div>
         </div>
+        <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Zobox || SASTE MOBILE KA ADDA" />
+        </Helmet>
     </div>
 
     
