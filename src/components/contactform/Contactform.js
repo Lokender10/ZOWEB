@@ -112,7 +112,6 @@ const Contactform = () => {
  const validatequeryContent = (queryContent) =>  !queryContent ? "Enter your query": "";
 
 
-const radius = 85;
   return (
     <>
 

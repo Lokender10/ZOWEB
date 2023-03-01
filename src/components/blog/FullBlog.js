@@ -40,7 +40,7 @@ const FullBlog = () => {
     }
 
     useEffect(async()=> {
-        let response = await axios.get(`http://localhost:3001/zobiz/getBlog/${id}`)
+        let response = await axios.get(`https://zobizapis.el.r.appspot.com/zobiz/getBlog/${id}`)
         let {data} = response;
         console.log("Fullblog", data);
         setUser(data);

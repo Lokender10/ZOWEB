@@ -40,7 +40,7 @@ const BlogPost = () => {
     }
 
     useEffect(async()=> {
-      let response = await axios.get("http://localhost:3001/zobiz/getBlog");
+      let response = await axios.get("https://zobizapis.el.r.appspot.com/zobiz/getBlog");
       let { data } = response;
       console.log("Data", data);
       setBlog(data); 
