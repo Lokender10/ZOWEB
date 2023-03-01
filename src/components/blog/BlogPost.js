@@ -44,7 +44,7 @@ const BlogPost = () => {
       let { data } = response;
       console.log("Data", data);
       setBlog(data); 
-    },[blog]) 
+    },[]) 
 
     let navigate = useNavigate();
     let news = blog ? blog.filter((n) => n.typeofContent === "News") : [];

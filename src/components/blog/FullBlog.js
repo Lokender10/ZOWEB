@@ -44,7 +44,7 @@ const FullBlog = () => {
         let {data} = response;
         console.log("Fullblog", data);
         setUser(data);
-    })
+    },[])
 
     return (
         <div className="container">
