@@ -8,7 +8,7 @@ import img1 from "../../assets/step01.png";
 import img2 from "../../assets/step02.png";
 import img3 from "../../assets/step03.png";
 import imgform from "../../assets/leftmen.png";
-import axios from "axios";
+import http from "../httpServices/httpServices";
 // import imgform from " ";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -41,7 +41,7 @@ const Subscribe = () => {
         body.typeofQuery = typeofQuery;
         body.dateofUpdate = new Date();
         body.queryContent = queryContent;
-        let response = await axios.post("https://zobizapis.el.r.appspot.com/zobiz/saveQuery", body)
+        let response = await http.post("/saveQuery", body)
         let { data } = response;
          setSaved(data);
          setErrors({});

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import axios from "axios";
+import http from "../httpServices/httpServices";
 import "./Contactform.css";
 import daimg from "../../assets/daimg.png";
 import { TiSocialGooglePlus } from "react-icons/ti";
@@ -67,7 +67,7 @@ const Contactform = () => {
             body.typeofQuery = typeofQuery;
             body.dateofUpdate = new Date();
             body.queryContent = queryContent;
-            let response = await axios.post("https://zobizapis.el.r.appspot.com/zobiz/saveQuery", body)
+            let response = await http.post("/saveQuery", body)
             let { data } = response;
              setSaved(data);
              setErrors({});

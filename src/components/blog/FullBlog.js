@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { Image, Row, Col } from  "react-bootstrap"
 import { useState, useEffect } from "react";
-import axios from "axios";
+import http from "../httpServices/httpServices";
 import { Helmet } from "react-helmet";
 
 
@@ -40,7 +40,7 @@ const FullBlog = () => {
     }
 
     useEffect(async()=> {
-        let response = await axios.get(`https://zobizapis.el.r.appspot.com/zobiz/getBlog/${id}`)
+        let response = await http.get(`/getBlog/${id}`)
         let {data} = response;
         console.log("Fullblog", data);
         setUser(data);

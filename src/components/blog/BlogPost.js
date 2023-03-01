@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Card, Row, Col, Image } from  "react-bootstrap";
 import ThemeProvider from 'react-bootstrap/ThemeProvider'
 import Button from "react-bootstrap/Button";
-import axios from "axios";
+import http from "../httpServices/httpServices";
 import "./blogPost.css";
 import { Helmet } from "react-helmet";
 
@@ -40,7 +40,7 @@ const BlogPost = () => {
     }
 
     useEffect(async()=> {
-      let response = await axios.get("https://zobizapis.el.r.appspot.com/zobiz/getBlog");
+      let response = await http.get("/getBlog");
       let { data } = response;
       console.log("Data", data);
       setBlog(data); 
