@@ -3,6 +3,7 @@ import axios from "axios";
 const baseApiUrl = "https://zobizapis.el.r.appspot.com/zobiz";
 
 function get(url) {
+    console.log(baseApiUrl+url);
     return axios.get(baseApiUrl + url);
 }
 
