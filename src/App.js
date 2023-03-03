@@ -1,5 +1,6 @@
 import "./App.css";
 import React from 'react';
+import ReactGA from "react-ga";
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import Navbar from "./components/navbar/Navbar";
 // import Header from "./components/header/Header";
@@ -52,17 +53,33 @@ import {
 } from "./components";
 import BlogPost from "./components/blog/BlogPost";
 import FullBlog from "./components/blog/FullBlog";
+import { useEffect } from "react";
 
-class App extends React.Component {
-  render(){
+const TRACKING_ID = "G-ZMGJ2958RV";
+ReactGA.initialize(TRACKING_ID);
+
+ReactGA.event({
+  category: 'User',
+  action: 'Created an Account'
+});
+ReactGA.exception({
+  description: 'An error ocurred',
+  fatal: true
+});
+
+
+
+const  App = () =>  {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
     
   return (
     <><>
 
-      
     </><div>
       
-    
         <> 
             </>
           <Routes>
@@ -205,6 +222,5 @@ class App extends React.Component {
       
       </div></>
   );
-}
 }
 export default App;

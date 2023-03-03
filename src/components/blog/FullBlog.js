@@ -10,47 +10,36 @@ const FullBlog = () => {
 
     const [user, setUser] = useState({});
     let {id} = useParams();
-    
+
     const handleDate = (dt) => {
-        console.log(dt);
-        console.log(dt);
         let dt1 = dt ? dt : "";
-        let index1 = dt1.indexOf("-");
-        let sub1 = dt1.substring(0, index1);
-        let index2 = dt1.indexOf("-", index1+1);
-        let sub2 = dt1.substring(index1+1, index2);
-        let sub3 = dt1.substring(index2+1, index2+3)
-        let date = sub3;
-        let year = sub1;
-        let month = "";
-        console.log(sub1, sub2, sub3);
-        if(sub2 == 1) month = "JAN"
-        else if(sub2 == 2)  month  =  "FEB" 
-        else if(sub2 == 3)  month  =  "MAR" 
-        else if(sub2 == 4)  month =  "APR"
-        else if(sub2 == 5)  month =  "MAY" 
-        else if(sub2 == 6)  month =  "JUN"
-        else if(sub2 == 7)  month =  "JUL"
-        else if(sub2 == 8)  month =  "AUG" 
-        else if(sub2 == 9)  month =  "SEPT" 
-        else if(sub2 == 10)  month =  "OCT" 
-        else if(sub2 == 11)  month =  "NOV" 
-        else if(sub2 == 12)  month =  "DEC"
+        let index1 = dt1.indexOf(" ");
+        let index2 = dt1.indexOf(" ", index1+1);
+        let sub1 = dt1.substring(index1+1, index2);
+        let index3 = dt1.indexOf(" ", index2+1);
+        let sub2 = dt1.substring(index2+1, index3);
+        let index4 = dt1.indexOf(" ", index3+1);
+        let sub3 = dt1.substring(index3+1, index4)
+        console.log(sub3)
+        let date = sub2;
+        let year = sub3;
+        let month = sub1;
+
        return date + " " + " " + month + " " + year;
     }
 
     useEffect(async()=> {
         let response = await http.get(`/getBlog/${id}`)
         let {data} = response;
-        console.log("Fullblog", data);
         setUser(data);
     },[])
 
+  let writer = user.writtenBy ? user.writtenBy : "";
     return (
         <div className="container">
             <h2>{user.title}</h2>
-            <span style={{color: "darkgray",fontSize:"14px"}}>By : </span> <span style={{color: "blue", fontSize:"14px"}}>{ " "+ user.image ? user.writtenBy: ""}</span><br />
-            <span style={{color: "darkgray",fontSize:"14px"}}>Date : </span><span style={{fontSize:"14px"}}>{handleDate(user.dateofCreation ? user.dateofCreation : "")}</span>
+            <span style={{color: "darkgray",fontSize:"14px"}}>By : </span> <span style={{color: "blue", fontSize:"14px"}}>{ " "+ user.writtenBy ? writer.username : ""}</span><br />
+            <span style={{color: "darkgray",fontSize:"14px"}}>Date : </span><span style={{fontSize:"14px"}}>{handleDate( user.dateofCreation ? user.dateofCreation : "")}</span>
             <Row>
                 {user.image && user.image.map((i) => (
                     <Col xl={4} md={4}>
