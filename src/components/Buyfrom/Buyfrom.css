@@ -15,7 +15,8 @@
 #sideimage{
     width: 70%;
     height: auto;
-    padding: 1%; 
+    padding: 1%;
+    margin:auto 6%;
   }
 
   .buyrow img:hover{

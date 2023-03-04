@@ -287,6 +287,18 @@ textarea{
   stroke: #ddd;
 }
 
+textarea{
+  font-family: 'Montserrat', sans-serif;
+  padding: 1rem;
+  background: transparent;
+  border: 1.4px solid #1f2469;
+  border-radius: 5px;
+  color: #1f2469;
+  outline: none;
+  width: 80%;
+  font-size: 1.6rem;
+}
+
 @media screen and (max-width: 600px) {
   .queryContent{
       width: 275px;
