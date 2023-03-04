@@ -29,7 +29,7 @@ const BlogPost = () => {
     useEffect(async()=> {
       let response = await http.get("/getBlog");
       let { data } = response;
-      setBlog(data); 
+      setBlog(data);
     },[])
 
     let navigate = useNavigate();

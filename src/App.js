@@ -1,6 +1,6 @@
 import "./App.css";
 import React from 'react';
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 import { Helmet } from "react-helmet";
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import Navbar from "./components/navbar/Navbar";
@@ -55,6 +55,8 @@ import {
 import BlogPost from "./components/blog/BlogPost";
 import FullBlog from "./components/blog/FullBlog";
 import { useEffect } from "react";
+
+/*
 const TRACKING_ID = "G-ZMGJ2958RV";
 ReactGA.initialize(TRACKING_ID);
 
@@ -62,21 +64,18 @@ ReactGA.event({
 category: 'User',
 action: 'Created an Account'
 });
-ReactGA.exception({
-description: 'An error ocurred',
-fatal: true
-});
 
 
+useEffect(() => {
+    ReactGA.send("pageview");
+  }, []);
+
+  */
+    
 
 const  App = () =>  {
 
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
-
   
-    
   return (
     <>
  <Helmet>
