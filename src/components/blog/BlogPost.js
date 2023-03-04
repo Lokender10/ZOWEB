@@ -84,7 +84,7 @@ const BlogPost = () => {
                 <Row>
                 {news.map((ele, index) => (
                     index <=7 ?
-                        <Col xl={3} md={3}>
+                        <Col xl={3} md={3} className="blogcard">
                         <Image src={ele.image[0]} style={{marginBottom:"4%", cursor:"pointer"}} width="300rem" rounded onClick={() =>navigate(`/blog/user/${ele._id}`)}/>
                         <p xs={5} md={6} style={{marginTop:"10px"}}>
                             <h2>{ele.title}</h2> 

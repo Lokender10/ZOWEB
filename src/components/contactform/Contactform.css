@@ -120,6 +120,19 @@ form button {
   padding: 40px 40px 10px 40px;
   position: relative;
 }
+
+textarea{
+  font-family: 'Montserrat', sans-serif;
+    padding: 1rem;
+    background: transparent;
+    border: 1.4px solid #1f2469;
+    border-radius: 5px;
+    color: #1f2469;
+    outline: none;
+    width: 80%;
+    font-size: 1.6rem;
+}
+
 #b_partner .img-box i {
   font-style: normal;
   text-align: center;
@@ -166,7 +179,7 @@ form button {
 
 #sideimage{
   width: 70%;
-  
+  margin:100px;
 }
 
 .wrapper{

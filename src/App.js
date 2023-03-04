@@ -50,6 +50,7 @@ import {
   PartnerBenefits,
   Contactform,
   Privacy,
+  Error404
   
 } from "./components";
 import BlogPost from "./components/blog/BlogPost";
@@ -133,6 +134,7 @@ const  App = () =>  {
               <Footer />
             </>} />
             <Route path="/" element={<Navigate to="/home" />} />
+            <Route path="/404" element={<Error404 />} />
 
             <Route path="/About" element={<><br /><br /><br /><br /><Navbar />
               <Features imgsrc={about} title={"About Us"}

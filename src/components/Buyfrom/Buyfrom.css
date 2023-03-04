@@ -13,10 +13,9 @@
 
  } 
 #sideimage{
-    width: 90%;
+    width: 70%;
     height: auto;
-    padding: 1%;
-    margin:auto 6%;
+    padding: 1%; 
   }
 
   .buyrow img:hover{
