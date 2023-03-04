@@ -1,3 +1,18 @@
+.wrapper{
+   margin: 25% ;
+   height: 1px;
+}
+
+.wrapper > svg {
+    height: 400px;
+    
+}
+.pageh1{
+    text-align: center;
+    position: sticky;
+    bottom: 10%;
+    font-size: 50px;
+}
 .cls-1 {
     fill: #ffc541;
   }
