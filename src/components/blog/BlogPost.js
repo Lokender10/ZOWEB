@@ -27,9 +27,14 @@ const BlogPost = () => {
     }
 
     useEffect(async()=> {
+    try {
       let response = await http.get("/getBlog");
       let { data } = response;
       setBlog(data);
+    }
+    catch(ex) {
+        console.log(ex);
+    }
     },[])
 
     let navigate = useNavigate();

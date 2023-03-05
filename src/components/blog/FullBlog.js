@@ -29,9 +29,14 @@ const FullBlog = () => {
     }
 
     useEffect(async()=> {
+        try{
         let response = await http.get(`/getBlog/${id}`)
         let {data} = response;
         setUser(data);
+        }
+        catch(ex){
+            console.log(ex)
+        }
     },[])
 
   let writer = user.writtenBy ? user.writtenBy : "";
