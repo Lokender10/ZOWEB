@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 // import "../App.css";
 import {Link} from 'react-router-dom';
 // import zoooobox from "../Img/zoooobox.png";
@@ -7,6 +7,10 @@ import {Link} from 'react-router-dom';
 const Privacy =() => {
   return(
     <div class="row">
+             <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="This Privacy Policy explains the collection, use, and sharing of information from or about you in connection with your use of the Services. We may collect the following information about you or from you which would help us personalize and constantly improve your experience" />
+        </Helmet>
     <div class="col-12" style={{padding:"30px",marginTop:"70px"}} >
     <div class="container-fluid">
     <div class="about-section">
@@ -326,10 +330,6 @@ Please note that there is always a possibility that a breach in data transmissio
         </div>
 
       </div> */}
-       <Helmet>
-            <title>Zobox || SASTE MOBILE KA ADDA</title>
-            <meta name="description" content="Zobox || SASTE MOBILE KA ADDA" />
-        </Helmet>
 </div> 
   )
 }

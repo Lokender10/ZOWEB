@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { questions } from "./data.js";
 import Question from "./Question";
 import { MdOutlineLibraryBooks } from "react-icons/md";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 import AOS from "aos";
 import "aos/dist/aos.css";

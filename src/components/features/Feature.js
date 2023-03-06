@@ -2,7 +2,7 @@ import React from "react";
 import "./Feature.css";
 import { FaAccessibleIcon } from "react-icons/fa";
 import { BsHexagon } from "react-icons/bs";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Feature = ({ icon, heading, text }) => {
   return (

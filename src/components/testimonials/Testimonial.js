@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../testimonials/Testimonials.css";
 import { Avatar } from "@material-ui/core";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const PreviousBtn = (props) => {
   console.log(props);
@@ -29,6 +29,10 @@ const Testimonial = () => {
       className="testimonial"
       style={{ display: "flex", justifyContent: "center", marginTop: 50 }}
     >
+         <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Testimonial" />
+        </Helmet>
       <div  className="title" style={{ width: "50%", textAlign: "center" }}>
         <h2 style={{ marginBottom: 20 }}>TESTIMONIALS</h2>
         <Slider prevArrow={<PreviousBtn />} nextArrow={<NextBtn />} dots>
@@ -73,10 +77,6 @@ const Card = ({ img }) => {
         <span style={{ fontWeight: 500, color: " #2b367f" }}>PAULA WILSON</span> ,
         Media Analyst
       </p>
-      <Helmet>
-            <title>Zobox || SASTE MOBILE KA ADDA</title>
-            <meta name="description" content="Testimonial" />
-        </Helmet>
     </div>
   );
 };

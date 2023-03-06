@@ -44,7 +44,7 @@ const Features = props => {
         </div>
       </div>
       <Helmet>
-            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <title>{props.title}</title>
             <meta name="description" content={props.content.slice(0,50)} />
         </Helmet>
     </section>

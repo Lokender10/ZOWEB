@@ -6,7 +6,7 @@ import download_app from "../../assets/download_app.png";
 import pngwing from "../../assets/pngwing.com.png";
 import apple from "../../assets/apple.png";
 import zobiz1 from "../../assets/zobiz1.png";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 const Appdown = () => {
   useEffect(() => {
     AOS.init({
@@ -15,6 +15,10 @@ const Appdown = () => {
   }, []);
   return (
     <section id="download_app" class="section-padding wow fadeIn animated"   data-wow-delay=".1s" style={{visibility: 'visible',delay:' .1s' ,delay: '.1s', animationdelay:' .1s'}}>
+      <Helmet>
+            <title>Download</title>
+            <meta name="description" content="Simply download the Zobiz app become a partner and start ordering mobile phones at best rates." />
+        </Helmet>
     <div class="container">
   <div class="row">
       <div class="col-lg-6 col-md-12 col-xs-12" data-aos="fade-right">
@@ -35,10 +39,6 @@ const Appdown = () => {
     </div>
   </div>
 </div>
-<Helmet>
-            <title>Zobox || SASTE MOBILE KA ADDA</title>
-            <meta name="description" content="Zobox || SASTE MOBILE KA ADDA" />
-        </Helmet>
 </section>
   );
 };

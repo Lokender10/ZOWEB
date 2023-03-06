@@ -5,7 +5,7 @@ import { GrAndroid } from "react-icons/gr";
 import { IconContext } from "react-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Download = () => {
   useEffect(() => {
@@ -15,6 +15,10 @@ const Download = () => {
   }, []);
   return (
     <section id="download">
+      <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Our apps are available for download on all stores." />
+        </Helmet>
       <div className="container download" data-aos="fade-up">
         <h2>Zobiz download</h2>
         <p className="u-text-small">
@@ -34,10 +38,6 @@ const Download = () => {
           </div>
         </IconContext.Provider>
       </div>
-      <Helmet>
-            <title>Zobox || SASTE MOBILE KA ADDA</title>
-            <meta name="description" content="Zobox || SASTE MOBILE KA ADDA" />
-        </Helmet>
     </section>
   );
 };

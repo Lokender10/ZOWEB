@@ -6,7 +6,7 @@ import about from "../../assets/about.png";
 import head from "../../assets/headimg.png";
 import head1 from "../../assets/headimg1.png";
 import { BsMouse } from "react-icons/bs";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -20,6 +20,10 @@ const Header = () => {
   
   return (
     <section id="header">
+           <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Buy Refurbished Mobile Phones online at Zobox" />
+        </Helmet>
       <div className="header">
         <div className="header-left" data-aos="fade-right">
           <h1>
@@ -46,10 +50,6 @@ const Header = () => {
           <BsMouse color="#fff" size={25} className="mouse" />
         </a>
       </div> */}
-         <Helmet>
-            <title>Zobox || SASTE MOBILE KA ADDA</title>
-            <meta name="description" content="Zobox || SASTE MOBILE KA ADDA" />
-        </Helmet>
     </section>
   );
 };

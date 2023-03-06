@@ -12,7 +12,7 @@ import imgform from "../../assets/Contactus.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useState } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Contactform = () => {
 
@@ -164,6 +164,10 @@ const Contactform = () => {
     
    {/* form start */}
     <section id="subscribe" className="row">
+    <Helmet>
+            <title>Contact Form</title>
+            <meta name="description" content="Here submit your query" />
+        </Helmet>
       <div className="container subscribe col-md-6" data-aos="fade-up">
         <h2>Contact Us</h2>
         {savedQuery ? <span className="text-success" style={{fontSize:"16px"}}>{savedQuery}</span> : error? <span className="text-danger" style={{fontSize:"25px"}}>{error}</span> : ""}
@@ -215,10 +219,6 @@ const Contactform = () => {
       <img src={imgform}  id="sideimage"></img>
       </div>
     </section>
-    <Helmet>
-            <title>Contact Form</title>
-            <meta name="description" content="Zobox || SASTE MOBILE KA ADDA" />
-        </Helmet>
     </>
   );
 };

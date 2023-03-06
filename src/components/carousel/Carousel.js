@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../carousel/Carousel.css";
 import { data } from "./data";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 // import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 
 // const PreviousBtn = (props) => {

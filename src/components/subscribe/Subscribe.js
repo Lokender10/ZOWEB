@@ -12,7 +12,7 @@ import http from "../httpServices/httpServices";
 // import imgform from " ";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Subscribe = () => {
 
@@ -92,7 +92,10 @@ useEffect(() => {
   return (
 
     <>
-
+    <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Our Sales Person Contact And Register You As A Partner On Zobiz App" />
+        </Helmet>
     <section id="b_partner" class="section-padding"  >
       <div class="">
         <div class="section-header text-center" data-aos="fade-up">          
@@ -182,10 +185,6 @@ useEffect(() => {
       <img src={imgform}  id="sideimage"></img>
       </div>
     </section>
-    <Helmet>
-            <title>Zobox || SASTE MOBILE KA ADDA</title>
-            <meta name="description" content="Zobox || SASTE MOBILE KA ADDA" />
-        </Helmet>
     </>
   );
 };

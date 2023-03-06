@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Image, Row, Col } from  "react-bootstrap"
 import { useState, useEffect } from "react";
 import http from "../httpServices/httpServices";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 
 const FullBlog = () => {
@@ -42,6 +42,10 @@ const FullBlog = () => {
   let writer = user.writtenBy ? user.writtenBy : "";
     return (
         <div className="container">
+            <Helmet>
+            <title>{user.title ? user.title.slice(0,20) : ""}</title>
+            <meta name="description" content={ user.content ? user.content.slice(0,100) : ""} />
+            </Helmet>
             <h2>{user.title}</h2>
             <span style={{color: "darkgray",fontSize:"14px"}}>By : </span> <span style={{color: "blue", fontSize:"14px"}}>{ " "+ user.writtenBy ? writer.username : ""}</span><br />
             <span style={{color: "darkgray",fontSize:"14px"}}>Date : </span><span style={{fontSize:"14px"}}>{handleDate( user.dateofCreation ? user.dateofCreation : "")}</span>
@@ -53,10 +57,6 @@ const FullBlog = () => {
                 ))}
             </Row>
             <p>{user.content ? user.content : ""}</p>
-            <Helmet>
-            <title>{user.title ? user.title.slice(0,20) : ""}</title>
-            <meta name="description" content={ user.content ? user.content.slice(0,50) : ""} />
-            </Helmet>
         </div>
     );
 

@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Resellcarousel.css";
 import { data } from "./data";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 // import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 
 // const PreviousBtn = (props) => {
@@ -34,8 +34,11 @@ const Resellcarousel = () => {
       
     };
     return (
-      
       <div className="ResellCarousel-head">
+         <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Zobox || SASTE MOBILE KA ADDA" />
+        </Helmet>
          <div className="title " data-aos="fade-up">
           <h2>Brands We Sell</h2>
      
@@ -47,10 +50,6 @@ const Resellcarousel = () => {
           </div>
         ))}
         </Slider>
-        <Helmet>
-            <title>Zobox || SASTE MOBILE KA ADDA</title>
-            <meta name="description" content="Zobox || SASTE MOBILE KA ADDA" />
-        </Helmet>
       </div>
     );
   

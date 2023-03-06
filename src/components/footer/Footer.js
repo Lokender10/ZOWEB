@@ -9,7 +9,7 @@ import {
   FaGlobe,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Footer = () => {
   return (
@@ -61,7 +61,7 @@ const Footer = () => {
       </div>
       <Helmet>
             <title>Zobox || SASTE MOBILE KA ADDA</title>
-            <meta name="description" content="Zobox || SASTE MOBILE KA ADDAt" />
+            <meta name="description" content="Buy Refurbished Mobile Phones online at zobox" />
         </Helmet>
     </section>
   );

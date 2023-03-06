@@ -5,7 +5,7 @@ import ThemeProvider from 'react-bootstrap/ThemeProvider'
 import Button from "react-bootstrap/Button";
 import http from "../httpServices/httpServices";
 import "./blogPost.css";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const BlogPost = () => {
 
@@ -44,9 +44,8 @@ const BlogPost = () => {
         <div className="container">
                 <Helmet>
                     <title>Blog</title>
-                    <meta name="description" content={blog.length > 0 ? blog[0].content.substring(0,30) : ""} />
-                    <a href="https://zobox.in"></a>
-                    </Helmet>
+                    <meta name="description" content={blog.length > 0 ? blog[0].content.slice(0,30) : ""} />
+               </Helmet>
             <h2 className="zobox" style={{fontSize:"18px"}}><u>ZOBOX :</u></h2>
             <p className="zobox1">Welcome to Zobox blog section, where we continuously curate the best and most helpful content for you to navigate
                the smartphone and gadgets world easily. Primarily you will find the latest mobile news here updated as soon as possible,

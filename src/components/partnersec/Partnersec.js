@@ -2,12 +2,16 @@ import React from 'react';
 // import signpic from "...images/signup.svg*; 
 import './Partnersec.css';
 import img1 from '../../assets/google.png'
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
  
 const PartnerBenefits = props => {
     return (
       <section class="benifit-background-color">
+            <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Get a pre-established customer network and grow customer base" />
+        </Helmet>
       <div class="benifits mt-5">
           <h3 class="mt-5 benifits-head-title">Benefits of Becoming a Zobiz Partner</h3>
           <div class="hr-line "></div>
@@ -54,10 +58,6 @@ const PartnerBenefits = props => {
               </div> */}
           </div>
       </div>
-      <Helmet>
-            <title>Zobox || SASTE MOBILE KA ADDA</title>
-            <meta name="description" content="Get a pre-established customer network and grow customer base" />
-        </Helmet>
   </section>
 
     )

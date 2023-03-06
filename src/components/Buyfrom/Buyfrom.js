@@ -12,7 +12,7 @@ import img5 from "../../assets/buy5.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { height } from "@mui/system";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Buyfrom = props =>{
   useEffect(() => {

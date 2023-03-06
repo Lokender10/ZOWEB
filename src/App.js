@@ -1,7 +1,7 @@
 import "./App.css";
 import React from 'react';
 import ReactGA from "react-ga4";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import Navbar from "./components/navbar/Navbar";
 // import Header from "./components/header/Header";
@@ -76,9 +76,9 @@ useEffect(() => {
 
 const  App = () =>  {
 
-  
+  const helmetContext = {};
   return (
-    <>
+    <HelmetProvider context={helmetContext}>
  <Helmet>
             <title>Zobox || SASTE MOBILE KA ADDA</title>
             <meta name="description" content="We operate in B2B AND B2C models, engaging our consumers in the best possibilities . In a simple manner, we provide the best brands in Best Price. This was the motto behind conceiving ZOBOX." />
@@ -226,7 +226,8 @@ const  App = () =>  {
             <Route path="/blog/user/:id" element={<><Navbar /><br /><br /><FullBlog /><Footer /></>} />
           </Routes>
       
-      </div></>
+      </div>
+      </HelmetProvider>
   );
 }
 export default App;

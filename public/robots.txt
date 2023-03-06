@@ -1,3 +1,7 @@
 User-agent: *
+Disallow: /privacy.php
+
+User-agent: *
 Allow: /
+
 Sitemap: https://www.zobox.in/sitemap.xml

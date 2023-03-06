@@ -8,7 +8,7 @@ import Feature from "./Howwork";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Howworks = props => {
   useEffect(() => {
@@ -18,6 +18,10 @@ const Howworks = props => {
   }, []);
   return (
     <section id="howworks">
+         <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content={props.content.slice(0,50)} />
+        </Helmet>
       <div className=" howworks">
         <div className="title" data-aos="fade-up">
           <h2>{props.title}</h2>
@@ -36,10 +40,6 @@ const Howworks = props => {
           </div>
         </div>
       </div>
-      <Helmet>
-            <title>Zobox || SASTE MOBILE KA ADDA</title>
-            <meta name="description" content={props.content.slice(0,50)} />
-        </Helmet>
     </section>
   );
 };

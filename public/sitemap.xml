@@ -4,9 +4,10 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<url>
+<loc>https://zobox.in</loc>
+<lastmod>2023-03-05T08:02:28+00:00</lastmod>
+</url>
 <url>
   <loc>https://zobox.in/home</loc>
   <lastmod>2023-03-04T11:44:37+00:00</lastmod>
