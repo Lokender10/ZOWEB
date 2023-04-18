@@ -14,8 +14,8 @@ export { default as PartCarousel } from "../components/partcarousel/PartCarousel
 export { default as PartnerForm } from "./PartnerForm/PartnerForm";
 export { default as Counter } from "../components/counter/Counter";
 export { default as Testimonial } from "../components/testimonials/Testimonial";
-export { default as Resellcarousel } from "./Resellcarousel/Resellcarousel" ;
-export { default as Appdown } from "./downloadapp/Appdown" ;
+export { default as Resellcarousel } from "./Resellcarousel/Resellcarousel";
+export { default as Appdown } from "./downloadapp/Appdown";
 export {default as News} from "./news/News";
 export {default as PartnerBenefits} from "./partnersec/Partnersec";
 export {default as Contactform} from "./contactform/Contactform";

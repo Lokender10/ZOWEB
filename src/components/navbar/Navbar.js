@@ -23,7 +23,10 @@ const Navbar = () => {
   };
   return (
     <nav className="navbar ">
-    
+         <Helmet>
+            <title>Zobox || SASTE MOBILE KA ADDA</title>
+            <meta name="description" content="Zobox || SASTE MOBILE KA ADDAt" />
+        </Helmet>
       <div className="logo">
        <Link to="/home"> 
       <img src={zobox} onClick={top} height="70x"/>
@@ -46,11 +49,6 @@ const Navbar = () => {
           <li>
           <Link class="nav-link" to="/BecomePartner" onClick={top}>
             Partners
-            </Link>
-          </li>
-          <li>
-          <Link class="nav-link" to="/Download" onClick={top}>
-            Downloads
             </Link>
           </li>
           <li>
@@ -88,10 +86,6 @@ const Navbar = () => {
           <AiOutlineBars color="#fff" size={27} />
         )}
       </div>
-      <Helmet>
-            <title>Zobox || SASTE MOBILE KA ADDA</title>
-            <meta name="description" content="Zobox || SASTE MOBILE KA ADDAt" />
-        </Helmet>
     </nav>
   );
 };

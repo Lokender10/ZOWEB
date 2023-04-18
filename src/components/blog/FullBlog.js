@@ -28,6 +28,7 @@ const FullBlog = () => {
        return date + " " + " " + month + " " + year;
     }
 
+
     useEffect(async()=> {
         try{
         let response = await http.get(`/getBlog/${id}`)
@@ -41,23 +42,25 @@ const FullBlog = () => {
 
   let writer = user.writtenBy ? user.writtenBy : "";
     return (
+        <React.StrictMode>
         <div className="container">
             <Helmet>
-            <title>{user.title ? user.title.slice(0,20) : ""}</title>
-            <meta name="description" content={ user.content ? user.content.slice(0,100) : ""} />
+            <title>{user.title ? user.title.slice(0,50) : ""}</title>
+            <meta name="description" content={ user.content ? user.content.slice(0,500) : ""} />
             </Helmet>
             <h2>{user.title}</h2>
-            <span style={{color: "darkgray",fontSize:"14px"}}>By : </span> <span style={{color: "blue", fontSize:"14px"}}>{ " "+ user.writtenBy ? writer.username : ""}</span><br />
+            <span style={{color: "darkgray",fontSize:"14px"}}>By : </span> <span style={{color: "blue", fontSize:"14px"}}>{ " "+ user.writtenBy ? writer.username ? writer.username : "" : ""}</span><br />
             <span style={{color: "darkgray",fontSize:"14px"}}>Date : </span><span style={{fontSize:"14px"}}>{handleDate( user.dateofCreation ? user.dateofCreation : "")}</span>
             <Row>
-                {user.image && user.image.map((i) => (
-                    <Col xl={4} md={4}>
+                {user.image && user.image.map((i, index) => (
+                    <Col xl={4} md={4} key={index}>
                         <Image src={i} style={{marginBottom:"4%", marginTop:"4%"}} width="400rem" rounded />
                     </Col>
                 ))}
             </Row>
-            <p>{user.content ? user.content : ""}</p>
+             {user.content ? user.content.split("<br/>").map(str => <p><br />{str}</p>) : ""}
         </div>
+        </React.StrictMode>
     );
 
 }

@@ -26,6 +26,7 @@ const BlogPost = () => {
        return date + " " + " " + month + " " + year;
     }
 
+
     useEffect(async()=> {
     try {
       let response = await http.get("/getBlog");
@@ -40,11 +41,13 @@ const BlogPost = () => {
     let navigate = useNavigate();
     let news = blog ? blog.filter((n) => n.typeofContent === "News") : [];
     blog = blog ? blog.filter((e) => e.typeofContent === "Blog") : [];
+
     return (
+        <React.StrictMode>
         <div className="container">
                 <Helmet>
                     <title>Blog</title>
-                    <meta name="description" content={blog.length > 0 ? blog[0].content.slice(0,30) : ""} />
+                    <meta name="description" content={blog.length > 0 ? blog[0].content.slice(0,200) : ""} />
                </Helmet>
             <h2 className="zobox" style={{fontSize:"18px"}}><u>ZOBOX :</u></h2>
             <p className="zobox1">Welcome to Zobox blog section, where we continuously curate the best and most helpful content for you to navigate
@@ -54,26 +57,26 @@ const BlogPost = () => {
                  <Card.Body>
                 <ThemeProvider>
                <Row style={{marginLeft:"20px"}}>
-                    <Col xl={7} md={6}>
+                    <Col xl={7} md={6} className="col-left">
                         <React.Fragment>
                         <Card.Img src={blog.length > 0 ?  blog[0].image[0] : ""} style={{cursor:"pointer"}} className="image" onClick={() => navigate(`/blog/user/${blog.length > 0 ? blog[0]._id : ""}`)} />
                         <h3>{blog.length > 0 ? blog[0].title : ""}</h3> 
-                         <span style={{color: "darkgray",fontSize:"14px"}}>By : </span> <span style={{color: "blue", fontSize:"14px"}}>{ " "+ blog.length > 0 ? blog[0].writtenBy.username : ""}</span><br />
+                         <span style={{color: "darkgray",fontSize:"14px"}}>By : </span> <span style={{color: "blue", fontSize:"14px"}}>{ " "+ blog.length > 0 ? blog[0].writtenBy.username ? blog[0].writtenBy.username : "" : ""}</span><br />
                          <span style={{color: "darkgray",fontSize:"14px"}}>Date : </span><span style={{fontSize:"14px"}}>{handleDate(blog.length > 0 ? blog[0].dateofCreation : "")}</span>
-                        <p style={{cursor:"pointer"}} onClick={() =>navigate(`/blog/user/${blog.length > 0 ? blog[0]._id : ""}`)}>{blog.length > 0 ? blog[0].content.substring(0,30) : ""}</p>
+                        <p style={{cursor:"pointer", fontSize:"18px"}} onClick={() =>navigate(`/blog/user/${blog.length > 0 ? blog[0]._id : ""}`)}>{blog.length > 0 ? blog[0].content.substring(0, blog[0].content.indexOf("<br/>") > 375 ? 375 : blog[0].content.indexOf("<br/>")) : ""}</p>
                         </React.Fragment>
                     </Col>
-                    <Col xl={5} md={6}>
+                    <Col xl={5} md={6} className="col-right">
                     {blog.map((e,index) => (
                         index > 0 && index <= 4 ?
                         <Row>
                         <Col xs={7} md={6}>
                         <Card.Img src={e.image[0]} style={{marginBottom:"4%", cursor:"pointer"}} onClick={() =>navigate(`/blog/user/${e._id}`)}/>
                         </Col>
-                        <Col xs={5} md={6} style={{marginTop:"10px"}}><h2>{e.title}</h2> 
-                         <span style={{color: "darkgray", fontSize:"14px"}}>By : </span> <span style={{color: "blue", fontSize:"14px"}}>{ " "+e.writtenBy.username}</span><br />
+                        <Col xs={5} md={6} style={{marginTop:"10px"}}><h2>{e.title.length > 40 ? e.title.substring(0,40) + "..." : e.title }</h2> 
+                         <span style={{color: "darkgray", fontSize:"14px"}}>By : </span> <span style={{color: "blue", fontSize:"14px"}}>{ " "+ e.writtenBy != null  ?  e.writtenBy.username ? e.writtenBy.username : "" : ""}</span><br />
                          <span style={{color: "darkgray", fontSize:"14px"}}>Date : </span> <span style={{fontSize:"14px"}}>{handleDate(e.dateofCreation)}</span><br />
-                        <p style={{cursor:"pointer"}} onClick={() =>navigate(`/blog/user/${e._id}`)}>{e.content.substring(0,20)}</p><br />
+                        <p style={{cursor:"pointer"}} onClick={() =>navigate(`/blog/user/${e._id}`)}>{e.content.substring(0,60)}</p><br />
                         </Col>
                         </Row>
                         : ""
@@ -92,15 +95,16 @@ const BlogPost = () => {
                         <Image src={ele.image[0]} style={{marginBottom:"4%", cursor:"pointer"}} width="300rem" rounded onClick={() =>navigate(`/blog/user/${ele._id}`)}/>
                         <p xs={5} md={6} style={{marginTop:"10px"}}>
                             <h2>{ele.title}</h2> 
-                         <span style={{color: "darkgray", fontSize:"14px"}}>By : </span> <span style={{color: "blue", fontSize:"14px"}}>{ " "+ele.writtenBy.username}</span><br />
+                         <span style={{color: "darkgray", fontSize:"14px"}}>By : </span> <span style={{color: "blue", fontSize:"14px"}}>{ele.writtenBy != null  ?  ele.writtenBy.username ? ele.writtenBy.username : "" : ""}</span><br />
                          <span style={{color: "darkgray", fontSize:"14px"}}>Date : </span> <span style={{fontSize:"14px"}}>{handleDate(ele.dateofCreation)}</span><br />
-                        <p style={{cursor:"pointer"}} onClick={() =>navigate(`/blog/user/${ele._id}`)}>{ele.content.substring(0)}</p>
+                        <p style={{cursor:"pointer"}} onClick={() =>navigate(`/blog/user/${ele._id}`)}>{ele.content.substring(0,60)}</p>
                         </p>
                         </Col>
                         : ""
                 ))}
                     </Row>
         </div>
+        </React.StrictMode>
     );
 }
 

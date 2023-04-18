@@ -7,4 +7,4 @@ import image3 from "../../assets/banner3.png";
 // import image6 from "../../assets/carouselImage2";
 
 
-export const data = [image1, image2,image3];
+export const data = [image3, image2,image1];

@@ -2,22 +2,21 @@
 
 #header {
   position: relative;
-  margin: 1% auto;
   width: 100%;
-
 }
+
 .header {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin: 0 5%;
   z-index: -100;
-  padding-top: 5%;
+  padding-top: 2%;
 
 }
 
 .header h1 {
-  font-size: 4.4rem;
+  font-size: 3.4rem;
   line-height: 1.4;
   color: #2b367f;
   position: relative;
@@ -55,16 +54,32 @@ h1 span:nth-child(3) {
 }
 
 .header-right img {
-  width: 90%;
+  width: 70%;
+  height: auto;
   float: right;
 }
 
+.header-right p {
+  float: left;
+  position: relative;
+  font-weight: 400;
+  font-size: 30px;
+  margin-left: 130px;
+  color: #2b367f;
+}
+
 .header-left{
-    width: 45%;
+    width: 50%;
+    margin-top: 5%;
+}
+
+.span-margin{
+  margin-top: 1rem;
 }
 
 .header-right{
-  width: 55%;
+  width: 50%;
+  margin-top: 0%;
 }
 
 .floating-icon {
@@ -141,5 +156,9 @@ h1 span:nth-child(3) {
   }
   .header-right img {
     width: 100%;
+  }
+
+  .header-right p {
+    right: 50px;
   }
 }

@@ -19,27 +19,25 @@ const Footer = () => {
           <h4>Useful Links</h4>
           <div className="footer-links">
             <Link to="/Privacy">&bull; Privacy Policy</Link>
-            <a href="#">&bull; About</a>
-            <a href="#">&bull; Learn</a>
-            <a href="#">&bull; Hosting</a>
-            <a href="#">&bull; Messenger</a>
+            <Link to="/about">&bull; About</Link>
+            <Link to="/BecomePartner">&bull; Partners</Link>
+            <Link to="/Testimonial">&bull; Testimonial</Link>
+            <Link to="/Blog">&bull; Blog</Link>
           </div>
         </div>
         <div className="footer-box">
           <h4>Support</h4>
           <div className="footer-links">
-            <a href="#">&bull; Support</a>
-            <a href="#">&bull; About</a>
-            <a href="#">&bull; Learn</a>
-            <a href="#">&bull; Hosting</a>
-            <a href="#">&bull; Messenger</a>
+            <Link to="/contact">&bull; Support</Link>
+            <Link to="/about">&bull; About</Link>
+            <Link to="/Download">&bull; Download</Link>
           </div>
         </div>
         <div className="footer-box">
           <h4>Contact Us</h4>
           <div className="footer-contact u-text-small">
             <p>
-              <FaMapMarkerAlt /> &nbsp; Address: New Delhi Karol Bagh.
+              <FaMapMarkerAlt /> &nbsp; <a href="https://goo.gl/maps/L39SCjVG8wQmsx2T7" target="_blank">Address: New Delhi Karol Bagh.</a>
             </p>
             <p>
               <FaPhoneAlt /> &nbsp; Phone: +1230 123 1231.

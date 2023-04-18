@@ -28,7 +28,7 @@ const Header = () => {
         <div className="header-left" data-aos="fade-right">
           <h1>
             <span>Zobox Unfolds Your Business Potential by SuperEasy App Zobiz</span>
-            <span>Just One Click Away From Your Dream Income</span>
+            <span className="span-margin">Just One Click Away From Your Dream Income</span>
             {/* <span>B2B Part</span> */}
           </h1>
           {/* <p className="u-text-small">
@@ -43,6 +43,7 @@ const Header = () => {
         </div>
         <div className="header-right" data-aos="fade-left">
           <img src={head} alt="phone" />
+          <p>Transforming Renewed Mobile Experience</p>
         </div>
       </div>
       {/* <div className="floating-icon">

@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import about from "../src/assets/headimg.png";
 import img2 from "../src/assets/Mission.png";
 import img3 from "../src/assets/Vision.png";
-import img4 from "../src/assets/whypart.png";
+import img4 from "../src/assets/whypart.png"; 
 import img5 from "../src/assets/letsgrow.png";
 import img6 from "../src/assets/Unique.png";
 
@@ -58,7 +58,7 @@ import FullBlog from "./components/blog/FullBlog";
 import { useEffect } from "react";
 
 /*
-const TRACKING_ID = "G-ZMGJ2958RV";
+const TRACKING_ID = "G-10WRDZMWZ1";
 ReactGA.initialize(TRACKING_ID);
 
 ReactGA.event({
