@@ -55,6 +55,8 @@ import {
 } from "./components";
 import BlogPost from "./components/blog/BlogPost";
 import FullBlog from "./components/blog/FullBlog";
+
+import BlogSubmit from "./components/Blogpost/Blogsubmit";
 import { useEffect } from "react";
 
 /*
@@ -224,6 +226,8 @@ const  App = () =>  {
             <Route path="/Privacy" element={<><Navbar /><br /><br /><Privacy /><Footer /></>} />
             <Route path="/Blog" element={<><Navbar /><br /><br /><BlogPost /><Footer /></>} />
             <Route path="/blog/user/:id" element={<><Navbar /><br /><br /><FullBlog /><Footer /></>} />
+            <Route path="/Blogpost" element={<><Navbar /><br /><br /><BlogSubmit /><Footer /></>} />
+
           </Routes>
       
       </div>
