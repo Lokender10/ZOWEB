@@ -66,11 +66,11 @@ const Navbar = () => {
             Blog
             </Link>
           </li>
-          <li>
+          {/* <li>
           <Link class="nav-link" to="/Blogpost" onClick={top}>
             Blog Post
             </Link>
-          </li>
+          </li> */}
 
 
           {/* <li>
@@ -78,9 +78,9 @@ const Navbar = () => {
               Get Started
             </a>
           </li> */}
-          <li className="nav-btn">
+          {/* <li className="nav-btn">
             <Button text={"Shop Now"} btnClass={"btn-dark"} href={"http://mobile-n-you.surge.sh/category#"} />
-          </li>
+          </li> */}
 
 
         </ul>

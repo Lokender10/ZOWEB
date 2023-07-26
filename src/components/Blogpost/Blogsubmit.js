@@ -32,7 +32,7 @@ const BlogSubmit =() => {
 
     return(
         <div className="container">
-            <h1>Post Your Blog</h1>
+            <h1 className="blogPost-header">Post Your Blog</h1>
         <form>
             <input type="file"/><br/>
         <input type="text" placeholder="Title" id="title" name="title" value={title} onChange={(e)=> setTitle(e.currentTarget.value)} /><br />
