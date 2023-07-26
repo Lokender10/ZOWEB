@@ -84,17 +84,15 @@ const  App = () =>  {
             <meta name="description" content="We operate in B2B AND B2C models, engaging our consumers in the best possibilities . In a simple manner, we provide the best brands in Best Price. This was the motto behind conceiving ZOBOX." />
            </Helmet>
     <div>
-      
-        <> 
-            </>
           <Routes>
             <Route exact path="/home"  element={<>
-            <><header className="header-bg">
+            <>
+            <header className="header-bg">
               <Navbar />
-              <Header />
+              <Carousel />
             </header>
             </>
-              <Carousel />
+              <Header />
               <Features imgsrc={about} title={"About Us"}
               content={AboutList.map((feature) => (
                 <Feature

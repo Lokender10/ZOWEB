@@ -37,16 +37,13 @@ const Footer = () => {
           <h4>Contact Us</h4>
           <div className="footer-contact u-text-small">
             <p>
-              <FaMapMarkerAlt /> &nbsp; <a href="https://goo.gl/maps/L39SCjVG8wQmsx2T7" target="_blank">Address: New Delhi Karol Bagh.</a>
+              <FaMapMarkerAlt /> &nbsp; <a href="https://goo.gl/maps/L39SCjVG8wQmsx2T7" target="_blank">Address: 6/77, 4th Floor, WEA Karol Bagh Ajmal Khan Road, New Delhi-110005.</a>
             </p>
             <p>
               <FaPhoneAlt /> &nbsp; Phone: +1230 123 1231.
             </p>
             <p>
-              <FaFax /> &nbsp; Fax: +12342762178
-            </p>
-            <p>
-              <FaEnvelope /> &nbsp; Email: zobox.in.com
+              <FaEnvelope /> &nbsp; Email: hello@zobox.in
             </p>
           </div>
         </div>
@@ -55,7 +52,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="copy">
-      <p className="copyright">&copy; Copyright 2021 Zobox.in</p>
+      <p className="copyright">&copy; Copyright @ 2023 Zobox.in</p>
       </div>
       <Helmet>
             <title>Zobox || SASTE MOBILE KA ADDA</title>

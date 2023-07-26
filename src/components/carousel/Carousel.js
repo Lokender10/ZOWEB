@@ -37,17 +37,17 @@ const Carousel = () => {
     };
     return (
       <div className="Carousel-head">
-        <Slider {...settings}>
-        {data.map((item) => (
-          <div>
-            <img src={item} alt="" style={{ width: "100%", height: "100%",  objectfit: 'cover', objectposition: 'center', overflow:'hidden' }} />
-          </div>
-        ))}
-        </Slider>
-        <Helmet>
+             <Helmet>
             <title>Zobox || SASTE MOBILE KA ADDA</title>
             <meta name="description" content="Zobox || SASTE MOBILE KA ADDA" />
         </Helmet>
+        <Slider {...settings}>
+        {data.map((item) => (
+          <div>
+            <img src={item} alt="" style={{ width: "100vw", height: "100vh",  objectfit: 'cover', objectposition: 'center', overflow:'hidden' }} />
+          </div>
+        ))}
+        </Slider>
       </div>
     );
   
