@@ -66,6 +66,12 @@ const Navbar = () => {
             Blog
             </Link>
           </li>
+          <li>
+          <Link class="nav-link" to="/Blogpost" onClick={top}>
+            Blog Post
+            </Link>
+          </li>
+
 
           {/* <li>
             <a href="#" className="btn btn-dark">
